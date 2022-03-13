@@ -2598,7 +2598,7 @@
                 we = a(73223);
 
             function ke() {
-                return (0, me.BX)(t.Z)
+                return (0, me.BX)(t.Z, {})
             }
         }
     }
