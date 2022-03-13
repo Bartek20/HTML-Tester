@@ -3143,15 +3143,17 @@
     <script async src='/cloudfront.net/bundles/3116da2c0e7ce6c6739203bd0f3317ad2c3aee54.js'></script>
     <script>
         window.addEventListener("DOMContentLoaded", function(){
-            var header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
-            var header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
-            var header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
-            var header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
-            var header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
-            var section_pass_strenght = document.querySelector("#gatsby-focus-wrapper > main > section > section > div > p.chakra-text.css-hvhxt2");
-            var section_signup = document.querySelector("#gatsby-focus-wrapper > main > section > section.chakra-container.css-oq3v5k");
-            var section_about = document.querySelector("#gatsby-focus-wrapper > main > section.css-1h1c26f");
-            var footer = document.querySelector("#gatsby-focus-wrapper > footer > div");
+            do {
+                var header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
+                var header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
+                var header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
+                var header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
+                var header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
+                var section_pass_strenght = document.querySelector("#gatsby-focus-wrapper > main > section > section > div > p.chakra-text.css-hvhxt2");
+                var section_signup = document.querySelector("#gatsby-focus-wrapper > main > section > section.chakra-container.css-oq3v5k");
+                var section_about = document.querySelector("#gatsby-focus-wrapper > main > section.css-1h1c26f");
+                var footer = document.querySelector("#gatsby-focus-wrapper > footer > div");
+            } while (!(document.body.contains(footer)));
 
             header_left.remove();
             header_search.remove();
