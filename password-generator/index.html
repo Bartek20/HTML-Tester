@@ -3142,8 +3142,6 @@
     <script nomodule src='/cloudfront.net/js/polyfill-e577cbf2d8fde2d2bc05.js'></script>
     <script async src='/cloudfront.net/bundles/3116da2c0e7ce6c6739203bd0f3317ad2c3aee54.js'></script>
     <script>
-        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
-        
         window.addEventListener("DOMContentLoaded", function(){
             var header_left;
             var header_search;
@@ -3151,23 +3149,36 @@
             var header_mobile;
             var header_toggle;
             
-            sleep(1000).then(() => {
+            while (header_left == null)
+            {
                 header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
+            }
+            while (header_search == null)
+            {
                 header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
+            }
+            while (header_right == null)
+            {
                 header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
+            }
+            while (header_mobile == null)
+            {
                 header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
+            }
+            while (header_toggle == null)
+            {
                 header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
+            }
                 
-                try {
-                    header_left.remove();
-                    header_search.remove();
-                    header_right.remove();
-                    header_mobile.remove();
-                    header_toggle.remove();
-                } catch (error) {
-                    console.log(error);
-                }
-            });
+            try {
+                header_left.remove();
+                header_search.remove();
+                header_right.remove();
+                header_mobile.remove();
+                header_toggle.remove();
+            } catch (error) {
+                console.log(error);
+            }
         });
     </script>
 </body>
