@@ -2597,7 +2597,6 @@
                 we = a(73223);
 
             function ke() {
-<<<<<<< HEAD
                 return (0, me.BX)(t.Z, {
                     children: [(0, me.BX)(n.Z, {
                         maxW: "100%",
@@ -2618,28 +2617,6 @@
                         })]
                     }), (0, me.tZ)(ye.Z, {})]
                 })
-=======
-                return (0, me.BX)(t.Z, {
-                    children: [(0, me.BX)(n.Z, {
-                        maxW: "0%",
-                        background: "#175ddc",
-                        py: {
-                            base: "0rem",
-                            sm: "0rem",
-                            md: "0rem"
-                        },
-                        children: [(0, me.tZ)(fe, {}), (0, me.tZ)(ve, {
-                            header: "Start saving secure passwords in your free Bitwarden account today!",
-                            cta: {
-                                label: "Register a Free Account",
-                                href: we.Z.getStarted,
-                                category: "Password Generator Page",
-                                action: "Create Free Account"
-                            }
-                        })]
-                    }), (0, me.tZ)(ye.Z, {})]
-                })
->>>>>>> fe47feae233761bdc11a456950f96c6f8f6e1edd
             }
         }
     }
