@@ -3143,27 +3143,50 @@
     <script async src='/cloudfront.net/bundles/3116da2c0e7ce6c6739203bd0f3317ad2c3aee54.js'></script>
     <script>
         window.addEventListener("DOMContentLoaded", function(){
-            do {
-                var header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
-                var header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
-                var header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
-                var header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
-                var header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
-                var section_pass_strenght = document.querySelector("#gatsby-focus-wrapper > main > section > section > div > p.chakra-text.css-hvhxt2");
-                var section_signup = document.querySelector("#gatsby-focus-wrapper > main > section > section.chakra-container.css-oq3v5k");
-                var section_about = document.querySelector("#gatsby-focus-wrapper > main > section.css-1h1c26f");
-                var footer = document.querySelector("#gatsby-focus-wrapper > footer > div");
-            } while (!(document.body.contains(footer)));
+            var header_left;
+            var header_search;
+            var header_right;
+            var header_mobile;
+            var header_toggle;
+            var section_pass_strenght;
+            var section_signup;
+            var section_about;
+            var footer
+            
+            function selector() {
+                header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
+                header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
+                header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
+                header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
+                header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
+                section_pass_strenght = document.querySelector("#gatsby-focus-wrapper > main > section > section > div > p.chakra-text.css-hvhxt2");
+                section_signup = document.querySelector("#gatsby-focus-wrapper > main > section > section.chakra-container.css-oq3v5k");
+                section_about = document.querySelector("#gatsby-focus-wrapper > main > section.css-1h1c26f");
+                footer = document.querySelector("#gatsby-focus-wrapper > footer > div");
+                checker();
+            }
+            
+            function checker() {
+                try {
+                    selector();
 
-            header_left.remove();
-            header_search.remove();
-            header_right.remove();
-            header_mobile.remove();
-            header_toggle.remove();
-            section_pass_strenght.remove();
-            section_signup.remove();
-            section_about.remove();
-            footer.remove();
+                    if (header_left) throw "OK";
+                    else throw "Error";
+                } catch (err) {
+                    if (err == "Error") selector();
+                    else {
+                        header_left.remove();
+                        header_search.remove();
+                        header_right.remove();
+                        header_mobile.remove();
+                        header_toggle.remove();
+                        section_pass_strenght.remove();
+                        section_signup.remove();
+                        section_about.remove();
+                        footer.remove();
+                    }
+                }
+            }
         });
     </script>
 </body>
