@@ -3142,6 +3142,8 @@
     <script nomodule src='/cloudfront.net/js/polyfill-e577cbf2d8fde2d2bc05.js'></script>
     <script async src='/cloudfront.net/bundles/3116da2c0e7ce6c6739203bd0f3317ad2c3aee54.js'></script>
     <script>
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        
         window.addEventListener("DOMContentLoaded", function(){
             var header_left;
             var header_search;
@@ -3153,7 +3155,7 @@
             var section_about;
             var footer
             
-            function selector() {
+            sleep(3000).then(() => {
                 header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
                 header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
                 header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
@@ -3163,30 +3165,17 @@
                 section_signup = document.querySelector("#gatsby-focus-wrapper > main > section > section.chakra-container.css-oq3v5k");
                 section_about = document.querySelector("#gatsby-focus-wrapper > main > section.css-1h1c26f");
                 footer = document.querySelector("#gatsby-focus-wrapper > footer > div");
-                checker();
-            }
-            
-            function checker() {
-                try {
-                    selector();
-
-                    if (header_left) throw "OK";
-                    else throw "Error";
-                } catch (err) {
-                    if (err == "Error") selector();
-                    else {
-                        header_left.remove();
-                        header_search.remove();
-                        header_right.remove();
-                        header_mobile.remove();
-                        header_toggle.remove();
-                        section_pass_strenght.remove();
-                        section_signup.remove();
-                        section_about.remove();
-                        footer.remove();
-                    }
-                }
-            }
+                
+                header_left.remove();
+                header_search.remove();
+                header_right.remove();
+                header_mobile.remove();
+                header_toggle.remove();
+                section_pass_strenght.remove();
+                section_signup.remove();
+                section_about.remove();
+                footer.remove();
+            });
         });
     </script>
 </body>
