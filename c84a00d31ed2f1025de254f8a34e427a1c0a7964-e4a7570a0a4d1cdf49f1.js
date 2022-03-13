@@ -887,12 +887,7 @@
                 c = e(5009),
                 h = e(88837);
             l.Z = function() {
-                return (0, h.BX)(t.xu, {
-                    as: "section",
-                    bg: "bg.alt",
-                    w: "100%",
-                    children: [(0, h.BX)(a.Z, {}), (0, h.tZ)(t.xu, {})]
-                })
+                return (0, h.BX)(t.xu, {})
             }
         }
     }
