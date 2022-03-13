@@ -2538,18 +2538,6 @@
                                         })]
                                     })]
                                 })
-                            }), (0, me.BX)(o.xv, {
-                                mt: "6",
-                                children: ["Want to test the strength of another password? Try the Bitwarden", " ", (0, me.tZ)(o.rU, {
-                                    fontSize: "18px",
-                                    color: "primary",
-                                    _hover: {
-                                        textTransform: "none",
-                                        color: "secondary"
-                                    },
-                                    href: "/password-strength",
-                                    children: "Password Strength Testing Tool"
-                                }), "."]
                             })]
                         })
                     })
