@@ -1,0 +1,3146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#175ddc" />
+    <meta data-react-helmet="true" name="twitter:site" content="@bitwarden" />
+    <meta data-react-helmet="true" name="twitter:card" content="summary_large_image" />
+    <meta data-react-helmet="true" name="og:url" content="https://bitwarden.com/password-generator/" />
+    <meta data-react-helmet="true" name="og:site_name" content="Bitwarden" />
+    <meta data-react-helmet="true" name="og:image" content="https://bitwarden.com/images/bitwarden-og.png" />
+    <meta data-react-helmet="true" name="og:description" content="Generate secure, strong, and random passwords to maintain security and privacy online with Bitwarden password generator." />
+    <meta data-react-helmet="true" name="og:title" content="Strong Password Generator | Bitwarden" />
+    <meta data-react-helmet="true" name="keywords" content="strong password, new password, create new password, random password, random, generate new password" />
+    <meta data-react-helmet="true" name="description" content="Generate secure, strong, and random passwords to maintain security and privacy online with Bitwarden password generator." />
+    <meta name="generator" content="Gatsby 4.9.3" />
+    <title data-react-helmet="true">Strong Password Generator | Bitwarden</title>
+    <style>
+        .gatsby-image-wrapper {
+            position: relative;
+            overflow: hidden
+        }
+
+        .gatsby-image-wrapper picture.object-fit-polyfill {
+            position: static !important
+        }
+
+        .gatsby-image-wrapper img {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            margin: 0;
+            max-width: none;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            object-fit: cover
+        }
+
+        .gatsby-image-wrapper [data-main-image] {
+            opacity: 0;
+            transform: translateZ(0);
+            transition: opacity .25s linear;
+            will-change: opacity
+        }
+
+        .gatsby-image-wrapper-constrained {
+            display: inline-block;
+            vertical-align: top
+        }
+    </style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript>
+    <script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let
+        a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script>
+    <link rel="icon" href="/favicon-32x32.png?v=1abf57d1154002a9fac426a2c5c04d85" type="image/png" />
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=1abf57d1154002a9fac426a2c5c04d85" />
+    <script data-gatsby="web-vitals-polyfill">
+        ! function() {
+            var e, t, n, i, r = {
+                    passive: !0,
+                    capture: !0
+                },
+                a = new Date,
+                o = function() {
+                    i = [], t = -1, e = null, f(addEventListener)
+                },
+                c = function(i, r) {
+                    e || (e = r, t = i, n = new Date, f(removeEventListener), u())
+                },
+                u = function() {
+                    if (t >= 0 && t < n - a) {
+                        var r = {
+                            entryType: "first-input",
+                            name: e.type,
+                            target: e.target,
+                            cancelable: e.cancelable,
+                            startTime: e.timeStamp,
+                            processingStart: e.timeStamp + t
+                        };
+                        i.forEach((function(e) {
+                            e(r)
+                        })), i = []
+                    }
+                },
+                s = function(e) {
+                    if (e.cancelable) {
+                        var t = (e.timeStamp > 1e12 ? new Date : performance.now()) - e.timeStamp;
+                        "pointerdown" == e.type ? function(e, t) {
+                            var n = function() {
+                                    c(e, t), a()
+                                },
+                                i = function() {
+                                    a()
+                                },
+                                a = function() {
+                                    removeEventListener("pointerup", n, r), removeEventListener("pointercancel", i, r)
+                                };
+                            addEventListener("pointerup", n, r), addEventListener("pointercancel", i, r)
+                        }(t, e) : c(t, e)
+                    }
+                },
+                f = function(e) {
+                    ["mousedown", "keydown", "touchstart", "pointerdown"].forEach((function(t) {
+                        return e(t, s, r)
+                    }))
+                },
+                p = "hidden" === document.visibilityState ? 0 : 1 / 0;
+            addEventListener("visibilitychange", (function e(t) {
+                "hidden" === document.visibilityState && (p = t.timeStamp, removeEventListener("visibilitychange", e, !0))
+            }), !0);
+            o(), self.webVitals = {
+                firstInputPolyfill: function(e) {
+                    i.push(e), u()
+                },
+                resetFirstInputPolyfill: o,
+                get firstHiddenTime() {
+                    return p
+                }
+            }
+        }();
+    </script>
+    <script data-gatsby="web-vitals-polyfill">
+        ! function() {
+            var e, t, n, i, r = {
+                    passive: !0,
+                    capture: !0
+                },
+                a = new Date,
+                o = function() {
+                    i = [], t = -1, e = null, f(addEventListener)
+                },
+                c = function(i, r) {
+                    e || (e = r, t = i, n = new Date, f(removeEventListener), u())
+                },
+                u = function() {
+                    if (t >= 0 && t < n - a) {
+                        var r = {
+                            entryType: "first-input",
+                            name: e.type,
+                            target: e.target,
+                            cancelable: e.cancelable,
+                            startTime: e.timeStamp,
+                            processingStart: e.timeStamp + t
+                        };
+                        i.forEach((function(e) {
+                            e(r)
+                        })), i = []
+                    }
+                },
+                s = function(e) {
+                    if (e.cancelable) {
+                        var t = (e.timeStamp > 1e12 ? new Date : performance.now()) - e.timeStamp;
+                        "pointerdown" == e.type ? function(e, t) {
+                            var n = function() {
+                                    c(e, t), a()
+                                },
+                                i = function() {
+                                    a()
+                                },
+                                a = function() {
+                                    removeEventListener("pointerup", n, r), removeEventListener("pointercancel", i, r)
+                                };
+                            addEventListener("pointerup", n, r), addEventListener("pointercancel", i, r)
+                        }(t, e) : c(t, e)
+                    }
+                },
+                f = function(e) {
+                    ["mousedown", "keydown", "touchstart", "pointerdown"].forEach((function(t) {
+                        return e(t, s, r)
+                    }))
+                },
+                p = "hidden" === document.visibilityState ? 0 : 1 / 0;
+            addEventListener("visibilitychange", (function e(t) {
+                "hidden" === document.visibilityState && (p = t.timeStamp, removeEventListener("visibilitychange", e, !0))
+            }), !0);
+            o(), self.webVitals = {
+                firstInputPolyfill: function(e) {
+                    i.push(e), u()
+                },
+                resetFirstInputPolyfill: o,
+                get firstHiddenTime() {
+                    return p
+                }
+            }
+        }();
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            "platform": "gatsby"
+        });
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NF32QCS');
+    </script>
+    <style type="text/css">
+        .anchor.before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            padding-right: 4px;
+        }
+
+        .anchor.after {
+            display: inline-block;
+            padding-left: 4px;
+        }
+
+        h1 .anchor svg,
+        h2 .anchor svg,
+        h3 .anchor svg,
+        h4 .anchor svg,
+        h5 .anchor svg,
+        h6 .anchor svg {
+            visibility: hidden;
+        }
+
+        h1:hover .anchor svg,
+        h2:hover .anchor svg,
+        h3:hover .anchor svg,
+        h4:hover .anchor svg,
+        h5:hover .anchor svg,
+        h6:hover .anchor svg,
+        h1 .anchor:focus svg,
+        h2 .anchor:focus svg,
+        h3 .anchor:focus svg,
+        h4 .anchor:focus svg,
+        h5 .anchor:focus svg,
+        h6 .anchor:focus svg {
+            visibility: visible;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var hash = window.decodeURI(location.hash.replace('#', ''))
+            if (hash !== '') {
+                var element = document.getElementById(hash)
+                if (element) {
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+                    var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+                    var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+                    // Wait for the browser to finish rendering before scrolling.
+                    setTimeout((function() {
+                        window.scrollTo(0, offset - 0)
+                    }), 0)
+                }
+            }
+        })
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/cloudfront.net/BitwardenIcons/style-cf.css" />
+    <link as="script" rel="preload" href="/webpack-runtime-18f9d399c0dbbace2002.js" />
+    <link as="script" rel="preload" href="/framework-17fddc626c2ea4ff0e8c.js" />
+    <link as="script" rel="preload" href="/app-9eff3a556067733acc3c.js" />
+    <link as="script" rel="preload" href="/4afafdf3-afeea4605f90aeef68d6.js" />
+    <link as="script" rel="preload" href="/commons-cd0fba841dba151aa7d7.js" />
+    <link as="script" rel="preload" href="/94362d5ced6b2252fa30ee25c1292eb755551485-cbf3415d8938b60401a2.js" />
+    <link as="script" rel="preload" href="/77e7205dc4dde50ddb33fa43f8c91a9a650a7fd1-91864ecb17785bd5bbc9.js" />
+    <link as="script" rel="preload" href="/342e1947d2f4b0a8f3aa3bf8857dff70e5e98989-3a023307e5dd4a0f5888.js" />
+    <link as="script" rel="preload" href="/d45a4bc0bda7802ac97074d98681c029997cce18-dd30231159debbd39541.js" />
+    <link as="script" rel="preload" href="/93f4f48b4b1f009fed28a110065bef907441ec84-32e695cb16d01f1c6349.js" />
+    <link as="script" rel="preload" href="/c84a00d31ed2f1025de254f8a34e427a1c0a7964-e4a7570a0a4d1cdf49f1.js" />
+    <link as="script" rel="preload" href="/82e15519ace757d1e30204d3bb270f8127a77253-b8d9b16de482313ce0fc.js" />
+    <link as="script" rel="preload" href="/component---src-pages-password-generator-js-f87e96b4378dae3e7d23.js" />
+    <link as="fetch" rel="preload" href="/page-data/password-generator/page-data.json" crossorigin="anonymous" />
+    <link as="fetch" rel="preload" href="/page-data/sq/app-data.json" crossorigin="anonymous" />
+    <link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous" />
+</head>
+
+<body>
+    <script>
+        (function setScript(initialValue) {
+            var mql = window.matchMedia("(prefers-color-scheme: dark)");
+            var systemPreference = mql.matches ? "dark" : "light";
+            var persistedPreference = systemPreference;
+
+            try {
+                persistedPreference = localStorage.getItem("chakra-ui-color-mode");
+            } catch (error) {
+                console.log("Chakra UI: localStorage is not available. Color mode persistence might not work as expected");
+            }
+
+            var colorMode;
+
+            if (persistedPreference) {
+                colorMode = persistedPreference;
+            } else if (initialValue === "system") {
+                colorMode = systemPreference;
+            } else {
+                colorMode = initialValue != null ? initialValue : systemPreference;
+            }
+
+            if (colorMode) {
+                /**
+                 * Keep in sync with `root.set() {@file ./color-mode.utils.ts}
+                 */
+                document.documentElement.style.setProperty("--chakra-ui-color-mode", colorMode);
+                document.documentElement.setAttribute("data-theme", colorMode);
+            }
+        })('light')
+    </script>
+    <div id="___gatsby">
+        <style data-emotion="css-global 1v9064o">
+            :host,
+            :root {
+                --chakra-ring-inset: var(--chakra-empty, /*!*/
+                /*!*/
+                );
+                --chakra-ring-offset-width: 0px;
+                --chakra-ring-offset-color: #fff;
+                --chakra-ring-color: rgba(66, 153, 225, 0.6);
+                --chakra-ring-offset-shadow: 0 0 #0000;
+                --chakra-ring-shadow: 0 0 #0000;
+                --chakra-space-x-reverse: 0;
+                --chakra-space-y-reverse: 0;
+                --chakra-colors-transparent: transparent;
+                --chakra-colors-current: currentColor;
+                --chakra-colors-black: #000000;
+                --chakra-colors-white: #FFFFFF;
+                --chakra-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+                --chakra-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+                --chakra-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+                --chakra-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+                --chakra-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+                --chakra-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+                --chakra-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+                --chakra-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+                --chakra-colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+                --chakra-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+                --chakra-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+                --chakra-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+                --chakra-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+                --chakra-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+                --chakra-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+                --chakra-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+                --chakra-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+                --chakra-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+                --chakra-colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+                --chakra-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+                --chakra-colors-gray-50: #F7FAFC;
+                --chakra-colors-gray-100: #EBEBF0;
+                --chakra-colors-gray-200: #E3E4EB;
+                --chakra-colors-gray-300: #C7C8D9;
+                --chakra-colors-gray-400: #8E90A6;
+                --chakra-colors-gray-500: #747798;
+                --chakra-colors-gray-600: #555770;
+                --chakra-colors-gray-700: #28293D;
+                --chakra-colors-gray-800: #202129;
+                --chakra-colors-gray-900: #16171F;
+                --chakra-colors-red-50: #FFF5F5;
+                --chakra-colors-red-100: #FED7D7;
+                --chakra-colors-red-200: #FEB2B2;
+                --chakra-colors-red-300: #FC8181;
+                --chakra-colors-red-400: #F56565;
+                --chakra-colors-red-500: #E53E3E;
+                --chakra-colors-red-600: #C53030;
+                --chakra-colors-red-700: #9B2C2C;
+                --chakra-colors-red-800: #822727;
+                --chakra-colors-red-900: #63171B;
+                --chakra-colors-orange-50: #FFFAF0;
+                --chakra-colors-orange-100: #FEEBC8;
+                --chakra-colors-orange-200: #FBD38D;
+                --chakra-colors-orange-300: #F6AD55;
+                --chakra-colors-orange-400: #ED8936;
+                --chakra-colors-orange-500: #DD6B20;
+                --chakra-colors-orange-600: #C05621;
+                --chakra-colors-orange-700: #9C4221;
+                --chakra-colors-orange-800: #7B341E;
+                --chakra-colors-orange-900: #652B19;
+                --chakra-colors-yellow-50: #FFFFF0;
+                --chakra-colors-yellow-100: #FEFCBF;
+                --chakra-colors-yellow-200: #FAF089;
+                --chakra-colors-yellow-300: #F6E05E;
+                --chakra-colors-yellow-400: #ECC94B;
+                --chakra-colors-yellow-500: #D69E2E;
+                --chakra-colors-yellow-600: #B7791F;
+                --chakra-colors-yellow-700: #975A16;
+                --chakra-colors-yellow-800: #744210;
+                --chakra-colors-yellow-900: #5F370E;
+                --chakra-colors-green-50: #F0FFF4;
+                --chakra-colors-green-100: #C6F6D5;
+                --chakra-colors-green-200: #9AE6B4;
+                --chakra-colors-green-300: #68D391;
+                --chakra-colors-green-400: #48BB78;
+                --chakra-colors-green-500: #38A169;
+                --chakra-colors-green-600: #2F855A;
+                --chakra-colors-green-700: #276749;
+                --chakra-colors-green-800: #22543D;
+                --chakra-colors-green-900: #1C4532;
+                --chakra-colors-teal-50: #E6FFFA;
+                --chakra-colors-teal-100: #B2F5EA;
+                --chakra-colors-teal-200: #81E6D9;
+                --chakra-colors-teal-300: #4FD1C5;
+                --chakra-colors-teal-400: #38B2AC;
+                --chakra-colors-teal-500: #319795;
+                --chakra-colors-teal-600: #2C7A7B;
+                --chakra-colors-teal-700: #285E61;
+                --chakra-colors-teal-800: #234E52;
+                --chakra-colors-teal-900: #1D4044;
+                --chakra-colors-blue-50: #ebf8ff;
+                --chakra-colors-blue-100: #bee3f8;
+                --chakra-colors-blue-200: #90cdf4;
+                --chakra-colors-blue-300: #63b3ed;
+                --chakra-colors-blue-400: #4299e1;
+                --chakra-colors-blue-500: #3182ce;
+                --chakra-colors-blue-600: #2b6cb0;
+                --chakra-colors-blue-700: #2c5282;
+                --chakra-colors-blue-800: #2a4365;
+                --chakra-colors-blue-900: #1A365D;
+                --chakra-colors-cyan-50: #EDFDFD;
+                --chakra-colors-cyan-100: #C4F1F9;
+                --chakra-colors-cyan-200: #9DECF9;
+                --chakra-colors-cyan-300: #76E4F7;
+                --chakra-colors-cyan-400: #0BC5EA;
+                --chakra-colors-cyan-500: #00B5D8;
+                --chakra-colors-cyan-600: #00A3C4;
+                --chakra-colors-cyan-700: #0987A0;
+                --chakra-colors-cyan-800: #086F83;
+                --chakra-colors-cyan-900: #065666;
+                --chakra-colors-purple-50: #FAF5FF;
+                --chakra-colors-purple-100: #E9D8FD;
+                --chakra-colors-purple-200: #D6BCFA;
+                --chakra-colors-purple-300: #B794F4;
+                --chakra-colors-purple-400: #9F7AEA;
+                --chakra-colors-purple-500: #805AD5;
+                --chakra-colors-purple-600: #6B46C1;
+                --chakra-colors-purple-700: #553C9A;
+                --chakra-colors-purple-800: #44337A;
+                --chakra-colors-purple-900: #322659;
+                --chakra-colors-pink-50: #FFF5F7;
+                --chakra-colors-pink-100: #FED7E2;
+                --chakra-colors-pink-200: #FBB6CE;
+                --chakra-colors-pink-300: #F687B3;
+                --chakra-colors-pink-400: #ED64A6;
+                --chakra-colors-pink-500: #D53F8C;
+                --chakra-colors-pink-600: #B83280;
+                --chakra-colors-pink-700: #97266D;
+                --chakra-colors-pink-800: #702459;
+                --chakra-colors-pink-900: #521B41;
+                --chakra-colors-linkedin-50: #E8F4F9;
+                --chakra-colors-linkedin-100: #CFEDFB;
+                --chakra-colors-linkedin-200: #9BDAF3;
+                --chakra-colors-linkedin-300: #68C7EC;
+                --chakra-colors-linkedin-400: #34B3E4;
+                --chakra-colors-linkedin-500: #00A0DC;
+                --chakra-colors-linkedin-600: #008CC9;
+                --chakra-colors-linkedin-700: #0077B5;
+                --chakra-colors-linkedin-800: #005E93;
+                --chakra-colors-linkedin-900: #004471;
+                --chakra-colors-facebook-50: #E8F4F9;
+                --chakra-colors-facebook-100: #D9DEE9;
+                --chakra-colors-facebook-200: #B7C2DA;
+                --chakra-colors-facebook-300: #6482C0;
+                --chakra-colors-facebook-400: #4267B2;
+                --chakra-colors-facebook-500: #385898;
+                --chakra-colors-facebook-600: #314E89;
+                --chakra-colors-facebook-700: #29487D;
+                --chakra-colors-facebook-800: #223B67;
+                --chakra-colors-facebook-900: #1E355B;
+                --chakra-colors-messenger-50: #D0E6FF;
+                --chakra-colors-messenger-100: #B9DAFF;
+                --chakra-colors-messenger-200: #A2CDFF;
+                --chakra-colors-messenger-300: #7AB8FF;
+                --chakra-colors-messenger-400: #2E90FF;
+                --chakra-colors-messenger-500: #0078FF;
+                --chakra-colors-messenger-600: #0063D1;
+                --chakra-colors-messenger-700: #0052AC;
+                --chakra-colors-messenger-800: #003C7E;
+                --chakra-colors-messenger-900: #002C5C;
+                --chakra-colors-whatsapp-50: #dffeec;
+                --chakra-colors-whatsapp-100: #b9f5d0;
+                --chakra-colors-whatsapp-200: #90edb3;
+                --chakra-colors-whatsapp-300: #65e495;
+                --chakra-colors-whatsapp-400: #3cdd78;
+                --chakra-colors-whatsapp-500: #22c35e;
+                --chakra-colors-whatsapp-600: #179848;
+                --chakra-colors-whatsapp-700: #0c6c33;
+                --chakra-colors-whatsapp-800: #01421c;
+                --chakra-colors-whatsapp-900: #001803;
+                --chakra-colors-twitter-50: #E5F4FD;
+                --chakra-colors-twitter-100: #C8E9FB;
+                --chakra-colors-twitter-200: #A8DCFA;
+                --chakra-colors-twitter-300: #83CDF7;
+                --chakra-colors-twitter-400: #57BBF5;
+                --chakra-colors-twitter-500: #1DA1F2;
+                --chakra-colors-twitter-600: #1A94DA;
+                --chakra-colors-twitter-700: #1681BF;
+                --chakra-colors-twitter-800: #136B9E;
+                --chakra-colors-twitter-900: #0D4D71;
+                --chakra-colors-telegram-50: #E3F2F9;
+                --chakra-colors-telegram-100: #C5E4F3;
+                --chakra-colors-telegram-200: #A2D4EC;
+                --chakra-colors-telegram-300: #7AC1E4;
+                --chakra-colors-telegram-400: #47A9DA;
+                --chakra-colors-telegram-500: #0088CC;
+                --chakra-colors-telegram-600: #007AB8;
+                --chakra-colors-telegram-700: #006BA1;
+                --chakra-colors-telegram-800: #005885;
+                --chakra-colors-telegram-900: #003F5E;
+                --chakra-colors-primary: #175ddc;
+                --chakra-colors-secondary: #1252a3;
+                --chakra-colors-tertiary: #1a3b66;
+                --chakra-colors-primaryGreen: #26ff75;
+                --chakra-colors-bg-alt: #ecf0f5;
+                --chakra-colors-muted: gray.400;
+                --chakra-borders-none: 0;
+                --chakra-borders-1px: 1px solid;
+                --chakra-borders-2px: 2px solid;
+                --chakra-borders-4px: 4px solid;
+                --chakra-borders-8px: 8px solid;
+                --chakra-fonts-heading: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+                --chakra-fonts-body: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+                --chakra-fonts-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                --chakra-fonts-monospace: Menlo, monospace;
+                --chakra-fontSizes-xs: 0.75rem;
+                --chakra-fontSizes-sm: 0.875rem;
+                --chakra-fontSizes-md: 1rem;
+                --chakra-fontSizes-lg: 1.125rem;
+                --chakra-fontSizes-xl: 1.25rem;
+                --chakra-fontSizes-2xl: 1.5rem;
+                --chakra-fontSizes-3xl: 1.875rem;
+                --chakra-fontSizes-4xl: 2.25rem;
+                --chakra-fontSizes-5xl: 3rem;
+                --chakra-fontSizes-6xl: 3.75rem;
+                --chakra-fontSizes-7xl: 4.5rem;
+                --chakra-fontSizes-8xl: 6rem;
+                --chakra-fontSizes-9xl: 8rem;
+                --chakra-fontWeights-hairline: 100;
+                --chakra-fontWeights-thin: 200;
+                --chakra-fontWeights-light: 300;
+                --chakra-fontWeights-normal: 400;
+                --chakra-fontWeights-medium: 500;
+                --chakra-fontWeights-semibold: 600;
+                --chakra-fontWeights-bold: 700;
+                --chakra-fontWeights-extrabold: 800;
+                --chakra-fontWeights-black: 900;
+                --chakra-letterSpacings-tighter: -0.05em;
+                --chakra-letterSpacings-tight: -0.025em;
+                --chakra-letterSpacings-normal: 0;
+                --chakra-letterSpacings-wide: 0.025em;
+                --chakra-letterSpacings-wider: 0.05em;
+                --chakra-letterSpacings-widest: 0.1em;
+                --chakra-lineHeights-3: .75rem;
+                --chakra-lineHeights-4: 1rem;
+                --chakra-lineHeights-5: 1.25rem;
+                --chakra-lineHeights-6: 1.5rem;
+                --chakra-lineHeights-7: 1.75rem;
+                --chakra-lineHeights-8: 2rem;
+                --chakra-lineHeights-9: 2.25rem;
+                --chakra-lineHeights-10: 2.5rem;
+                --chakra-lineHeights-normal: normal;
+                --chakra-lineHeights-none: 1;
+                --chakra-lineHeights-shorter: 1.25;
+                --chakra-lineHeights-short: 1.375;
+                --chakra-lineHeights-base: 1.5;
+                --chakra-lineHeights-tall: 1.625;
+                --chakra-lineHeights-taller: 2;
+                --chakra-radii-none: 0;
+                --chakra-radii-sm: 0.125rem;
+                --chakra-radii-base: 0.25rem;
+                --chakra-radii-md: 0.375rem;
+                --chakra-radii-lg: 0.5rem;
+                --chakra-radii-xl: 0.75rem;
+                --chakra-radii-2xl: 1rem;
+                --chakra-radii-3xl: 1.5rem;
+                --chakra-radii-full: 9999px;
+                --chakra-space-1: 0.25rem;
+                --chakra-space-2: 0.5rem;
+                --chakra-space-3: 0.75rem;
+                --chakra-space-4: 1rem;
+                --chakra-space-5: 1.25rem;
+                --chakra-space-6: 1.5rem;
+                --chakra-space-7: 1.75rem;
+                --chakra-space-8: 2rem;
+                --chakra-space-9: 2.25rem;
+                --chakra-space-10: 2.5rem;
+                --chakra-space-12: 3rem;
+                --chakra-space-14: 3.5rem;
+                --chakra-space-16: 4rem;
+                --chakra-space-20: 5rem;
+                --chakra-space-24: 6rem;
+                --chakra-space-28: 7rem;
+                --chakra-space-32: 8rem;
+                --chakra-space-36: 9rem;
+                --chakra-space-40: 10rem;
+                --chakra-space-44: 11rem;
+                --chakra-space-48: 12rem;
+                --chakra-space-52: 13rem;
+                --chakra-space-56: 14rem;
+                --chakra-space-60: 15rem;
+                --chakra-space-64: 16rem;
+                --chakra-space-72: 18rem;
+                --chakra-space-80: 20rem;
+                --chakra-space-96: 24rem;
+                --chakra-space-px: 1px;
+                --chakra-space-0-5: 0.125rem;
+                --chakra-space-1-5: 0.375rem;
+                --chakra-space-2-5: 0.625rem;
+                --chakra-space-3-5: 0.875rem;
+                --chakra-shadows-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+                --chakra-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                --chakra-shadows-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+                --chakra-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                --chakra-shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                --chakra-shadows-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                --chakra-shadows-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                --chakra-shadows-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+                --chakra-shadows-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+                --chakra-shadows-none: none;
+                --chakra-shadows-dark-lg: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+                --chakra-shadows-search: 0 0 0 1px rgba(16, 22, 26, .1), 0 4px 8px rgba(16, 22, 26, .2), 0 18px 46px 6px rgba(16, 22, 26, .2);
+                --chakra-sizes-1: 0.25rem;
+                --chakra-sizes-2: 0.5rem;
+                --chakra-sizes-3: 0.75rem;
+                --chakra-sizes-4: 1rem;
+                --chakra-sizes-5: 1.25rem;
+                --chakra-sizes-6: 1.5rem;
+                --chakra-sizes-7: 1.75rem;
+                --chakra-sizes-8: 2rem;
+                --chakra-sizes-9: 2.25rem;
+                --chakra-sizes-10: 2.5rem;
+                --chakra-sizes-12: 3rem;
+                --chakra-sizes-14: 3.5rem;
+                --chakra-sizes-16: 4rem;
+                --chakra-sizes-20: 5rem;
+                --chakra-sizes-24: 6rem;
+                --chakra-sizes-28: 7rem;
+                --chakra-sizes-32: 8rem;
+                --chakra-sizes-36: 9rem;
+                --chakra-sizes-40: 10rem;
+                --chakra-sizes-44: 11rem;
+                --chakra-sizes-48: 12rem;
+                --chakra-sizes-52: 13rem;
+                --chakra-sizes-56: 14rem;
+                --chakra-sizes-60: 15rem;
+                --chakra-sizes-64: 16rem;
+                --chakra-sizes-72: 18rem;
+                --chakra-sizes-80: 20rem;
+                --chakra-sizes-96: 24rem;
+                --chakra-sizes-px: 1px;
+                --chakra-sizes-0-5: 0.125rem;
+                --chakra-sizes-1-5: 0.375rem;
+                --chakra-sizes-2-5: 0.625rem;
+                --chakra-sizes-3-5: 0.875rem;
+                --chakra-sizes-max: max-content;
+                --chakra-sizes-min: min-content;
+                --chakra-sizes-full: 100%;
+                --chakra-sizes-3xs: 14rem;
+                --chakra-sizes-2xs: 16rem;
+                --chakra-sizes-xs: 20rem;
+                --chakra-sizes-sm: 24rem;
+                --chakra-sizes-md: 28rem;
+                --chakra-sizes-lg: 32rem;
+                --chakra-sizes-xl: 36rem;
+                --chakra-sizes-2xl: 42rem;
+                --chakra-sizes-3xl: 48rem;
+                --chakra-sizes-4xl: 56rem;
+                --chakra-sizes-5xl: 64rem;
+                --chakra-sizes-6xl: 72rem;
+                --chakra-sizes-7xl: 80rem;
+                --chakra-sizes-8xl: 90rem;
+                --chakra-sizes-container-sm: 640px;
+                --chakra-sizes-container-md: 768px;
+                --chakra-sizes-container-lg: 1024px;
+                --chakra-sizes-container-xl: 1280px;
+                --chakra-zIndices-hide: -1;
+                --chakra-zIndices-auto: auto;
+                --chakra-zIndices-base: 0;
+                --chakra-zIndices-docked: 10;
+                --chakra-zIndices-dropdown: 1000;
+                --chakra-zIndices-sticky: 1100;
+                --chakra-zIndices-banner: 1200;
+                --chakra-zIndices-overlay: 1300;
+                --chakra-zIndices-modal: 1400;
+                --chakra-zIndices-popover: 1500;
+                --chakra-zIndices-skipLink: 1600;
+                --chakra-zIndices-toast: 1700;
+                --chakra-zIndices-tooltip: 1800;
+                --chakra-transition-property-common: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+                --chakra-transition-property-colors: background-color, border-color, color, fill, stroke;
+                --chakra-transition-property-dimensions: width, height;
+                --chakra-transition-property-position: left, right, top, bottom;
+                --chakra-transition-property-background: background-color, background-image, background-position;
+                --chakra-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+                --chakra-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+                --chakra-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+                --chakra-transition-duration-ultra-fast: 50ms;
+                --chakra-transition-duration-faster: 100ms;
+                --chakra-transition-duration-fast: 150ms;
+                --chakra-transition-duration-normal: 200ms;
+                --chakra-transition-duration-slow: 300ms;
+                --chakra-transition-duration-slower: 400ms;
+                --chakra-transition-duration-ultra-slow: 500ms;
+                --chakra-blur-none: 0;
+                --chakra-blur-sm: 4px;
+                --chakra-blur-base: 8px;
+                --chakra-blur-md: 12px;
+                --chakra-blur-lg: 16px;
+                --chakra-blur-xl: 24px;
+                --chakra-blur-2xl: 40px;
+                --chakra-blur-3xl: 64px;
+            }
+        </style>
+        <style data-emotion="css-global 1jqlf9g">
+            html {
+                line-height: 1.5;
+                -webkit-text-size-adjust: 100%;
+                font-family: system-ui, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                text-rendering: optimizeLegibility;
+                -moz-osx-font-smoothing: grayscale;
+                touch-action: manipulation;
+            }
+
+            body {
+                position: relative;
+                min-height: 100%;
+                font-feature-settings: 'kern';
+            }
+
+            *,
+            *::before,
+            *::after {
+                border-width: 0;
+                border-style: solid;
+                box-sizing: border-box;
+            }
+
+            main {
+                display: block;
+            }
+
+            hr {
+                border-top-width: 1px;
+                box-sizing: content-box;
+                height: 0;
+                overflow: visible;
+            }
+
+            pre,
+            code,
+            kbd,
+            samp {
+                font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+                font-size: 1em;
+            }
+
+            a {
+                background-color: transparent;
+                color: inherit;
+                -webkit-text-decoration: inherit;
+                text-decoration: inherit;
+            }
+
+            abbr[title] {
+                border-bottom: none;
+                -webkit-text-decoration: underline;
+                text-decoration: underline;
+                -webkit-text-decoration: underline dotted;
+                -webkit-text-decoration: underline dotted;
+                text-decoration: underline dotted;
+            }
+
+            b,
+            strong {
+                font-weight: bold;
+            }
+
+            small {
+                font-size: 80%;
+            }
+
+            sub,
+            sup {
+                font-size: 75%;
+                line-height: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+
+            sub {
+                bottom: -0.25em;
+            }
+
+            sup {
+                top: -0.5em;
+            }
+
+            img {
+                border-style: none;
+            }
+
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 100%;
+                line-height: 1.15;
+                margin: 0;
+            }
+
+            button,
+            input {
+                overflow: visible;
+            }
+
+            button,
+            select {
+                text-transform: none;
+            }
+
+            button::-moz-focus-inner,
+            [type="button"]::-moz-focus-inner,
+            [type="reset"]::-moz-focus-inner,
+            [type="submit"]::-moz-focus-inner {
+                border-style: none;
+                padding: 0;
+            }
+
+            fieldset {
+                padding: 0.35em 0.75em 0.625em;
+            }
+
+            legend {
+                box-sizing: border-box;
+                color: inherit;
+                display: table;
+                max-width: 100%;
+                padding: 0;
+                white-space: normal;
+            }
+
+            progress {
+                vertical-align: baseline;
+            }
+
+            textarea {
+                overflow: auto;
+            }
+
+            [type="checkbox"],
+            [type="radio"] {
+                box-sizing: border-box;
+                padding: 0;
+            }
+
+            [type="number"]::-webkit-inner-spin-button,
+            [type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none !important;
+            }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+
+            [type="search"] {
+                -webkit-appearance: textfield;
+                outline-offset: -2px;
+            }
+
+            [type="search"]::-webkit-search-decoration {
+                -webkit-appearance: none !important;
+            }
+
+            ::-webkit-file-upload-button {
+                -webkit-appearance: button;
+                font: inherit;
+            }
+
+            details {
+                display: block;
+            }
+
+            summary {
+                display: -webkit-box;
+                display: -webkit-list-item;
+                display: -ms-list-itembox;
+                display: list-item;
+            }
+
+            template {
+                display: none;
+            }
+
+            [hidden] {
+                display: none !important;
+            }
+
+            body,
+            blockquote,
+            dl,
+            dd,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            hr,
+            figure,
+            p,
+            pre {
+                margin: 0;
+            }
+
+            button {
+                background: transparent;
+                padding: 0;
+            }
+
+            fieldset {
+                margin: 0;
+                padding: 0;
+            }
+
+            ol,
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            button,
+            [role="button"] {
+                cursor: pointer;
+            }
+
+            button::-moz-focus-inner {
+                border: 0 !important;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: inherit;
+                font-weight: inherit;
+            }
+
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+                padding: 0;
+                line-height: inherit;
+                color: inherit;
+            }
+
+            img,
+            svg,
+            video,
+            canvas,
+            audio,
+            iframe,
+            embed,
+            object {
+                display: block;
+            }
+
+            img,
+            video {
+                max-width: 100%;
+                height: auto;
+            }
+
+            [data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+                outline: none;
+                box-shadow: none;
+            }
+
+            select::-ms-expand {
+                display: none;
+            }
+        </style>
+        <style data-emotion="css-global pvasmq">
+            body {
+                font-family: var(--chakra-fonts-body);
+                color: var(--chakra-colors-gray-700);
+                background: var(--chakra-colors-white);
+                transition-property: background-color;
+                transition-duration: var(--chakra-transition-duration-normal);
+                line-height: var(--chakra-lineHeights-base);
+            }
+
+            *::-webkit-input-placeholder {
+                color: var(--chakra-colors-gray-400);
+            }
+
+            *::-moz-placeholder {
+                color: var(--chakra-colors-gray-400);
+            }
+
+            *:-ms-input-placeholder {
+                color: var(--chakra-colors-gray-400);
+            }
+
+            *::placeholder {
+                color: var(--chakra-colors-gray-400);
+            }
+
+            *,
+            *::before,
+            ::after {
+                border-color: var(--chakra-colors-gray-200);
+                word-wrap: break-word;
+            }
+
+            * {
+                font-size: 18px;
+                line-height: 1.5;
+                box-sizing: border-box;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                scroll-margin-top: calc(5rem);
+            }
+
+            input[type="file" i]:before {
+                cursor: default;
+                -webkit-align-items: baseline;
+                -webkit-box-align: baseline;
+                -ms-flex-align: baseline;
+                align-items: baseline;
+                white-space: pre;
+                border: var(--chakra-borders-none);
+                background-color: #8E90A6;
+                overflow: hidden !important;
+                border-radius: 4px;
+            }
+
+            input[type="search"]::-webkit-search-cancel-button {
+                display: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+            }
+
+            @media print {
+                div#___gatsby h1,
+                div#print-body h1,
+                div#___gatsby h2,
+                div#print-body h2,
+                div#___gatsby h3,
+                div#print-body h3,
+                div#___gatsby h4,
+                div#print-body h4,
+                div#___gatsby h5,
+                div#print-body h5,
+                div#___gatsby h6,
+                div#print-body h6 {
+                    page-break-after: avoid;
+                }
+                div#___gatsby h1,
+                div#print-body h1 {
+                    font-size: 24pt;
+                }
+                div#___gatsby h2,
+                div#print-body h2 {
+                    font-size: 21pt;
+                }
+                div#___gatsby h3,
+                div#print-body h3 {
+                    font-size: 18pt;
+                }
+                div#___gatsby h4,
+                div#print-body h4 {
+                    font-size: 16pt;
+                }
+                div#___gatsby h5,
+                div#print-body h5 {
+                    font-size: 14pt;
+                }
+                div#___gatsby h6,
+                div#print-body h6 {
+                    font-size: 14pt;
+                }
+                div#___gatsby p,
+                div#print-body p,
+                div#___gatsby b,
+                div#print-body b,
+                div#___gatsby strong,
+                div#print-body strong,
+                div#___gatsby a,
+                div#print-body a {
+                    font-size: 13pt;
+                }
+                div#___gatsby figcaption,
+                div#print-body figcaption {
+                    font-size: 10pt;
+                }
+                div#___gatsby figure,
+                div#print-body figure,
+                div#___gatsby img,
+                div#print-body img {
+                    page-break-inside: avoid;
+                }
+            }
+
+            .resources-hero h1,
+            .resources-hero h2,
+            .resources-hero {
+                font-weight: 600;
+            }
+
+            .resources-hero h1,
+            .resources-hero h1 b {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+            }
+
+            @media screen and (min-width: 30em) {
+                .resources-hero h1,
+                .resources-hero h1 b {
+                    font-size: 2.5rem;
+                    line-height: 2.75rem;
+                }
+            }
+
+            .resources-hero h2 {
+                font-size: 1.75rem;
+                padding-right: 0px;
+                line-height: 2rem;
+                margin-bottom: var(--chakra-space-8);
+            }
+
+            @media screen and (min-width: 30em) {
+                .resources-hero h2 {
+                    font-size: 2rem;
+                    padding-right: var(--chakra-space-8);
+                    line-height: 2.25rem;
+                }
+            }
+
+            .help-content h2 {
+                border-bottom: 3px solid #175ddc;
+                padding: 15px 0 10px;
+            }
+
+            .resources-rich-text {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .resources-rich-text h1,
+            .resources-rich-text h2,
+            .resources-rich-text h3,
+            .resources-rich-text h4,
+            .resources-rich-text h5,
+            .resources-rich-text h6 {
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+                line-height: 1.2;
+            }
+
+            .resources-rich-text h1 {
+                font-size: 3rem;
+            }
+
+            .resources-rich-text h2 {
+                font-size: 2.25rem;
+            }
+
+            .resources-rich-text h3 {
+                font-size: 1.75rem;
+                margin-top: 2.5rem;
+            }
+
+            .resources-rich-text h4 {
+                font-size: 1.5rem;
+            }
+
+            .resources-rich-text h5 {
+                font-size: 1.25rem;
+            }
+
+            .resources-rich-text p {
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.5;
+                text-align: left;
+                margin-bottom: 1.5rem;
+            }
+
+            .resources-rich-text ul,
+            .resources-rich-text ol {
+                margin-bottom: 1rem;
+                padding-left: 40px;
+            }
+
+            .resources-rich-text li {
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.5;
+                text-align: left;
+            }
+
+            .resources-rich-text li p {
+                margin-bottom: 0px;
+            }
+
+            .resources-rich-text a {
+                color: #175ddc;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .resources-rich-text blockquote p {
+                color: #555;
+                font-size: 1.5rem;
+                font-style: italic;
+                line-height: 2rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .resources-rich-text.center h1,
+            .resources-rich-text.center h2,
+            .resources-rich-text.center h3,
+            .resources-rich-text.center h4,
+            .resources-rich-text.center h5,
+            .resources-rich-text.center h6,
+            .resources-rich-text.center p {
+                text-align: center;
+            }
+
+            .resources-rich-text.left h1,
+            .resources-rich-text.left h2,
+            .resources-rich-text.left h3,
+            .resources-rich-text.left h4,
+            .resources-rich-text.left h5,
+            .resources-rich-text.left h6,
+            .resources-rich-text.left p {
+                text-align: left;
+            }
+
+            .resources-rich-text.right h1,
+            .resources-rich-text.right h2,
+            .resources-rich-text.right h3,
+            .resources-rich-text.right h4,
+            .resources-rich-text.right h5,
+            .resources-rich-text.right h6,
+            .resources-rich-text.right p {
+                text-align: right;
+            }
+
+            .resources-footer p {
+                margin-bottom: 1.5rem;
+            }
+
+            .rich-text-lg p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 300;
+                font-size: 20px;
+            }
+
+            .rich-text-sm p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 500;
+                font-size: 17px;
+            }
+
+            .bold-rich-text-lg p {
+                margin-bottom: var(--chakra-space-2);
+                font-weight: 500;
+                font-size: 25px;
+            }
+
+            .bold-rich-text-sm p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 500;
+                font-size: 17px;
+            }
+
+            .jumbotron p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 400;
+                font-size: 1.125rem;
+            }
+
+            .jumbotron ul {
+                margin-left: 3rem;
+            }
+
+            .jumbotron li {
+                font-size: 1.125rem;
+                padding-bottom: 12px;
+            }
+
+            .jumbotron b {
+                font-size: 1.125rem;
+            }
+
+            .jumbotron a {
+                font-size: 1.125rem;
+                color: #175ddc;
+            }
+
+            .jumbotron a:hover {
+                color: #1252a3;
+            }
+
+            .table p {
+                font-weight: 400;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .table strong {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .arrow-link {
+                color: #175ddc;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+                position: relative;
+            }
+
+            .arrow-link:hover,
+            .arrow-link[data-hover] {
+                color: #1252a3;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+            }
+
+            .arrow-link::after {
+                font-family: bwi-font;
+                content: '\e91b';
+                font-weight: var(--chakra-fontWeights-bold);
+            }
+
+            .gatsby-link-simple {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                color: #175ddc;
+            }
+
+            .gatsby-link-simple:hover {
+                color: #1252a3;
+            }
+
+            .submit-button {
+                cursor: pointer;
+                color: #ffffff;
+                background-color: #175ddc;
+                -webkit-padding-start: 25px;
+                padding-inline-start: 25px;
+                -webkit-padding-end: 25px;
+                padding-inline-end: 25px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 1.25rem;
+                font-weight: 400;
+                display: inline-block;
+            }
+
+            .submit-button:hover {
+                background-color: #1252a3;
+            }
+
+            .cookies-paragraph p {
+                margin-bottom: var(--chakra-space-2);
+                font-weight: 400;
+                font-size: 1.125rem;
+            }
+
+            .cookies-paragraph strong {
+                font-size: 1.125rem;
+            }
+
+            .cookies-paragraph a {
+                font-size: 1.125rem;
+                color: #175ddc;
+                cursor: pointer;
+            }
+
+            .cookies-paragraph a:hover {
+                color: #1252a3;
+            }
+
+            .cookies-paragraph ul {
+                margin-left: 3rem;
+            }
+
+            .cookies-paragraph li {
+                font-size: 1.125rem;
+                line-height: 2rem;
+                cursor: pointer;
+            }
+
+            .rich-content p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 400;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .rich-content em {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .rich-content strong {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+
+            .rich-content a {
+                font-size: 1.125rem;
+                color: #175ddc;
+                cursor: pointer;
+            }
+
+            .rich-content a:hover {
+                color: #1252a3;
+            }
+
+            .rich-content ul {
+                margin-left: 3rem;
+                margin-bottom: var(--chakra-space-4);
+            }
+
+            .rich-content ol {
+                margin-left: 3rem;
+                margin-bottom: var(--chakra-space-4);
+            }
+
+            .rich-content li {
+                font-size: 1.125rem;
+                line-height: 2rem;
+            }
+
+            .resource-video-page-hero p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 400;
+                font-size: 1rem;
+                color: var(--chakra-colors-white);
+            }
+
+            .resource-video-page-hero a {
+                font-size: 1.125rem;
+                color: #175ddc;
+                cursor: pointer;
+            }
+
+            .resource-video-page-hero a:hover {
+                color: #1252a3;
+            }
+
+            .resource-video-page-hero ul {
+                list-style: none;
+                margin: 0 0 1em 0;
+                padding: 0 0 0 1em;
+                color: #26ff75;
+            }
+
+            .resource-video-page-hero li {
+                font-size: 1.125rem;
+                line-height: 2rem;
+                position: relative;
+                padding-left: 0.4em;
+            }
+
+            .resource-video-page-hero li::before {
+                display: inline-block;
+                font-family: bwi-font;
+                content: '\e93a';
+                position: absolute;
+                left: -1em;
+                top: -0.35em;
+            }
+
+            .resource-video-page-hero-light p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 400;
+                font-size: 1rem;
+                color: #212529;
+            }
+
+            .resource-video-page-hero-light a {
+                font-size: 1.125rem;
+                color: #175ddc;
+                cursor: pointer;
+            }
+
+            .resource-video-page-hero-light a:hover {
+                color: #1252a3;
+            }
+
+            .resource-video-page-hero-light ul {
+                list-style: none;
+                margin: 0 0 1em 0;
+                padding: 0 0 0 1em;
+                color: #26ff75;
+            }
+
+            .resource-video-page-hero-light li {
+                font-size: 1.125rem;
+                line-height: 2rem;
+                position: relative;
+                padding-left: 0.4em;
+            }
+
+            .resource-video-page-hero-light li::before {
+                display: inline-block;
+                font-family: bwi-font;
+                content: '\e93a';
+                position: absolute;
+                left: -1em;
+                top: -0.35em;
+            }
+
+            .paragraph p {
+                margin-bottom: var(--chakra-space-4);
+                font-weight: 400;
+                font-size: 1.125rem;
+            }
+
+            .paragraph a {
+                font-size: 1.125rem;
+                color: #175ddc;
+                cursor: pointer;
+            }
+
+            .paragraph a:hover {
+                color: #1252a3;
+            }
+
+            .paragraph ul {
+                margin-left: 1rem;
+            }
+
+            @media screen and (min-width: 48em) {
+                .paragraph ul {
+                    margin-left: 3rem;
+                }
+            }
+
+            .paragraph li {
+                font-size: 1.125rem;
+                line-height: 2rem;
+                cursor: pointer;
+            }
+
+            .privacy p {
+                margin-bottom: var(--chakra-space-4);
+            }
+
+            .privacy strong {
+                margin-bottom: var(--chakra-space-4);
+            }
+
+            .privacy a {
+                color: #175ddc;
+                cursor: pointer;
+            }
+
+            .privacy a:hover {
+                color: #1252a3;
+            }
+
+            .privacy ul {
+                margin-left: 1rem;
+                margin-bottom: var(--chakra-space-4);
+            }
+
+            @media screen and (min-width: 48em) {
+                .privacy ul {
+                    margin-left: 3rem;
+                }
+            }
+
+            .privacy li {
+                cursor: pointer;
+            }
+
+            @-webkit-keyframes rotator {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes rotator {
+                from {
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to {
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes boom {
+                0% {
+                    -webkit-transform: scale(1);
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    transform: scale(1);
+                }
+                100% {
+                    -webkit-transform: scale(2);
+                    -moz-transform: scale(2);
+                    -ms-transform: scale(2);
+                    transform: scale(2);
+                }
+            }
+
+            @keyframes boom {
+                0% {
+                    -webkit-transform: scale(1);
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    transform: scale(1);
+                }
+                100% {
+                    -webkit-transform: scale(2);
+                    -moz-transform: scale(2);
+                    -ms-transform: scale(2);
+                    transform: scale(2);
+                }
+            }
+
+            @-webkit-keyframes appear {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes appear {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            .animate-me {
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+
+            .animate-me .send {
+                width: 17%;
+                position: absolute;
+            }
+
+            .animate-me .icon-tl {
+                top: 0px;
+                left: 0px;
+                opacity: 1;
+            }
+
+            .animate-me .icon-bl {
+                bottom: 0px;
+                left: 0px;
+                opacity: 1;
+            }
+
+            .animate-me .icon-tr {
+                top: 0px;
+                right: 0px;
+                opacity: 1;
+            }
+
+            .animate-me .icon-br {
+                bottom: 0px;
+                right: 0px;
+                opacity: 1;
+            }
+
+            .animate-me .icon-center {
+                position: absolute;
+                width: 40%;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+            .animate-me .lock-icon {
+                position: absolute;
+                bottom: 15%;
+                right: 15%;
+            }
+
+            .animate-me .lock-icon img {
+                opacity: 0;
+            }
+
+            .animate-me.execute .icon-tl {
+                -webkit-transform: translate(200%, 90%);
+                -moz-transform: translate(200%, 90%);
+                -ms-transform: translate(200%, 90%);
+                transform: translate(200%, 90%);
+                opacity: 0;
+                -webkit-transition: -webkit-transform 1.5s ease, opacity 1.25s ease;
+                transition: transform 1.5s ease, opacity 1.25s ease;
+                transition-delay: 1.5s;
+            }
+
+            .animate-me.execute .icon-bl {
+                -webkit-transform: translate(200%, -90%);
+                -moz-transform: translate(200%, -90%);
+                -ms-transform: translate(200%, -90%);
+                transform: translate(200%, -90%);
+                opacity: 0;
+                -webkit-transition: -webkit-transform 1.5s ease, opacity 1.25s ease;
+                transition: transform 1.5s ease, opacity 1.25s ease;
+                transition-delay: 2s;
+            }
+
+            .animate-me.execute .icon-tr {
+                -webkit-transform: translate(-200%, 90%);
+                -moz-transform: translate(-200%, 90%);
+                -ms-transform: translate(-200%, 90%);
+                transform: translate(-200%, 90%);
+                opacity: 0;
+                -webkit-transition: -webkit-transform 1.5s ease, opacity 1.25s ease;
+                transition: transform 1.5s ease, opacity 1.25s ease;
+                transition-delay: 1.75s;
+            }
+
+            .animate-me.execute .icon-br {
+                -webkit-transform: translate(-200%, -90%);
+                -moz-transform: translate(-200%, -90%);
+                -ms-transform: translate(-200%, -90%);
+                transform: translate(-200%, -90%);
+                opacity: 0;
+                -webkit-transition: -webkit-transform 1.5s ease, opacity 1.25s ease;
+                transition: transform 1.5s ease, opacity 1.25s ease;
+                transition-delay: 2.25s;
+            }
+
+            .animate-me.execute .spin img {
+                -webkit-animation-name: rotator;
+                animation-name: rotator;
+                -webkit-animation-duration: 4s;
+                animation-duration: 4s;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+            }
+
+            .animate-me.execute .boom img {
+                -webkit-animation-name: boom;
+                animation-name: boom;
+                -webkit-animation-delay: 3.5s;
+                animation-delay: 3.5s;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+                -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+
+            .animate-me.execute .lock-icon img {
+                -webkit-animation-name: appear;
+                animation-name: appear;
+                -webkit-animation-delay: 4.25s;
+                animation-delay: 4.25s;
+                -webkit-animation-duration: .2s;
+                animation-duration: .2s;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+            }
+
+            .osano-cm-widget {
+                display: none;
+            }
+
+            .mdx-prose h1 {
+                margin-top: 15px;
+                margin-bottom: var(--chakra-space-5);
+                line-height: 1.5;
+                font-family: var(--chakra-fonts-heading);
+                font-weight: var(--chakra-fontWeights-bold);
+                font-size: 1.75rem;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .mdx-prose h1 strong {
+                font-size: 3rem;
+            }
+
+            @media (min-width: 48em) {
+                .mdx-prose h1 {
+                    font-size: 3rem;
+                }
+            }
+
+            .mdx-prose h2 {
+                margin-top: var(--chakra-space-12);
+                margin-bottom: var(--chakra-space-5);
+                line-height: 1.25;
+                font-family: var(--chakra-fonts-heading);
+                font-weight: var(--chakra-fontWeights-bold);
+                font-size: 1.625rem;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .mdx-prose h2 strong {
+                font-size: 2.5rem;
+            }
+
+            @media (min-width: 48em) {
+                .mdx-prose h2 {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .mdx-prose h3 {
+                margin-top: var(--chakra-space-9);
+                margin-bottom: var(--chakra-space-3);
+                line-height: 1.25;
+                font-family: var(--chakra-fonts-heading);
+                font-weight: var(--chakra-fontWeights-bold);
+                font-size: 1.5rem;
+                letter-spacing: -.025em;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .mdx-prose h3 strong {
+                font-size: 2rem;
+            }
+
+            @media (min-width: 48em) {
+                .mdx-prose h3 {
+                    font-size: 2rem;
+                }
+            }
+
+            .mdx-prose h4 {
+                margin-top: var(--chakra-space-6);
+                margin-bottom: var(--chakra-space-2);
+                line-height: 1.375;
+                font-family: var(--chakra-fonts-heading);
+                font-size: 1.25rem;
+                font-weight: var(--chakra-fontWeights-bold);
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .mdx-prose h4 strong {
+                font-size: 1.5rem;
+            }
+
+            @media (min-width: 48em) {
+                .mdx-prose h4 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .mdx-prose h5 {
+                margin-top: var(--chakra-space-3);
+                margin-bottom: var(--chakra-space-1);
+                line-height: 1.25;
+                font-family: var(--chakra-fonts-heading);
+                font-weight: var(--chakra-fontWeights-bold);
+                font-size: 1.125rem;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .mdx-prose h5 strong {
+                font-size: 1.25rem;
+            }
+
+            @media (min-width: 48em) {
+                .mdx-prose h5 {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .mdx-prose h6 {
+                margin-top: var(--chakra-space-1-5);
+                margin-bottom: var(--chakra-space-0-5);
+                line-height: 1.1;
+                font-family: var(--chakra-fonts-heading);
+                font-weight: var(--chakra-fontWeights-bold);
+                font-size: 1rem;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .mdx-prose h6 strong {
+                font-size: 1rem;
+            }
+
+            .mdx-prose .iframe-wrapper {
+                margin-top: var(--chakra-space-5);
+                margin-bottom: var(--chakra-space-5);
+                padding-top: 56.25%;
+                position: relative;
+            }
+
+            .mdx-prose .iframe-wrapper iframe {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: 100%;
+                width: 100%;
+            }
+
+            .mdx-prose a {
+                color: var(--chakra-colors-blue-500);
+                font-weight: var(--chakra-fontWeights-semibold);
+                -webkit-transition: color 0.15s;
+                transition: color 0.15s;
+                transition-timing-function: var(--chakra-transition-easing-ease-out);
+            }
+
+            .mdx-prose a:hover,
+            .mdx-prose a[data-hover] {
+                color: var(--chakra-colors-blue-600);
+            }
+
+            .mdx-prose p {
+                margin-top: var(--chakra-space-5);
+                font-size: 1rem;
+            }
+
+            blockquote .mdx-prose p {
+                margin-top: 0px;
+            }
+
+            .mdx-prose p img {
+                -webkit-margin-start: auto;
+                margin-inline-start: auto;
+                -webkit-margin-end: auto;
+                margin-inline-end: auto;
+            }
+
+            .mdx-prose hr {
+                margin-top: 4rem;
+                margin-bottom: 4rem;
+            }
+
+            .mdx-prose blockquote {
+                color: #1252a3;
+                font-size: 1.25rem;
+                font-style: italic;
+                line-height: 1.5;
+                text-align: left;
+                margin-top: 2rem;
+                border-left: 10px solid #175ddc;
+                padding: .125rem 1.25rem 1.25rem;
+            }
+
+            .mdx-prose blockquote * {
+                font-size: 1.25rem;
+            }
+
+            .mdx-prose ul {
+                margin-top: var(--chakra-space-6);
+                margin-left: var(--chakra-space-8);
+            }
+
+            blockquote .mdx-prose ul {
+                margin-top: 0px;
+            }
+
+            .mdx-prose ul>*+* {
+                margin-top: 0.25rem;
+            }
+
+            .mdx-prose ol {
+                margin-top: var(--chakra-space-6);
+                margin-left: var(--chakra-space-8);
+            }
+
+            .mdx-prose code {
+                border-radius: var(--chakra-radii-sm);
+                -webkit-padding-start: var(--chakra-space-1);
+                padding-inline-start: var(--chakra-space-1);
+                -webkit-padding-end: var(--chakra-space-1);
+                padding-inline-end: var(--chakra-space-1);
+                font-size: 0.875em;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                white-space: nowrap;
+                line-height: var(--chakra-lineHeights-normal);
+            }
+
+            .mdx-prose table {
+                margin-top: var(--chakra-space-5);
+                margin-bottom: var(--chakra-space-5);
+                border: 1px solid;
+                border-color: table-border;
+                width: 100%;
+                table-layout: fixed;
+            }
+
+            .mdx-prose table thead tr {
+                background: table-bg;
+            }
+
+            .mdx-prose table thead tr th {
+                font-size: 18px;
+                padding: var(--chakra-space-3);
+            }
+
+            .mdx-prose table thead tr th * {
+                font-size: 18px;
+            }
+
+            .mdx-prose table tbody tr {
+                vertical-align: top;
+                border: 1px solid;
+                border-color: table-border;
+            }
+
+            .mdx-prose table tbody tr:nth-of-type(even) {
+                background: table-bg;
+            }
+
+            .mdx-prose table tbody tr td {
+                padding: var(--chakra-space-3);
+            }
+
+            .mdx-prose table ul {
+                margin-top: 0px;
+            }
+
+            .mdx-prose table p {
+                margin-top: 0px;
+                margin-bottom: var(--chakra-space-3);
+            }
+
+            .mdx-prose table br {
+                display: block;
+                margin-bottom: var(--chakra-space-3);
+            }
+
+            .mdx-prose .anchor svg {
+                height: 30px;
+                width: 30px;
+            }
+
+            #gatsby-plugin-page-progress {
+                top: 75px !important;
+                z-index: 2 !important;
+            }
+
+            ::target::before {
+                content: "";
+                display: block;
+                height: 80px;
+                margin-top: -80px;
+            }
+
+            svg {
+                fill: currentColor;
+                stroke: currentColor;
+            }
+
+            .fserv-form-optin-checkbox-text {
+                word-break: keep-all;
+            }
+        </style>
+        <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+            <style data-emotion="css 1rqki4a">
+                .css-1rqki4a {
+                    -webkit-transition: box-shadow 0.2s;
+                    transition: box-shadow 0.2s;
+                    z-index: 10;
+                    width: 100%;
+                    background: var(--chakra-colors-primary);
+                    color: var(--chakra-colors-white);
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 0px;
+                    height: 4rem;
+                }
+            </style>
+            <header class="css-1rqki4a">
+                <style data-emotion="css 1dsmrkm">
+                    .css-1dsmrkm {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        max-width: var(--chakra-sizes-xl);
+                        -webkit-box-pack: justify;
+                        -webkit-justify-content: space-between;
+                        justify-content: space-between;
+                        -webkit-align-items: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-padding-start: 15px;
+                        padding-inline-start: 15px;
+                        -webkit-padding-end: 15px;
+                        padding-inline-end: 15px;
+                        -webkit-margin-start: auto;
+                        margin-inline-start: auto;
+                        -webkit-margin-end: auto;
+                        margin-inline-end: auto;
+                        height: var(--chakra-sizes-full);
+                    }
+
+                    @media screen and (min-width: 48em) {
+                        .css-1dsmrkm {
+                            max-width: var(--chakra-sizes-7xl);
+                        }
+                    }
+                </style>
+                <div class="css-1dsmrkm">
+                    <style data-emotion="css gs045i">
+                        .css-gs045i {
+                            display: -webkit-box;
+                            display: -webkit-flex;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-align-items: center;
+                            -webkit-box-align: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            -webkit-box-pack: start;
+                            -ms-flex-pack: start;
+                            -webkit-justify-content: flex-start;
+                            justify-content: flex-start;
+                            -webkit-flex-basis: 0px;
+                            -ms-flex-preferred-size: 0px;
+                            flex-basis: 0px;
+                            -webkit-box-flex: 1;
+                            -webkit-flex-grow: 1;
+                            -ms-flex-positive: 1;
+                            flex-grow: 1;
+                            -webkit-align-self: stretch;
+                            -ms-flex-item-align: stretch;
+                            align-self: stretch;
+                        }
+                    </style>
+                    <div class="css-gs045i">
+                        <a style="margin-right:auto" href="/">
+                            <style data-emotion="css 1l00i4d">
+                                .css-1l00i4d {
+                                    display: -webkit-box;
+                                    display: -webkit-flex;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-align-items: center;
+                                    -webkit-box-align: center;
+                                    -ms-flex-align: center;
+                                    align-items: center;
+                                    margin-right: 16px;
+                                }
+
+                                .css-1l00i4d:hover,
+                                .css-1l00i4d[data-hover] {
+                                    -webkit-text-decoration: none;
+                                    text-decoration: none;
+                                }
+                            </style>
+                            <div class="css-1l00i4d">
+                                <style data-emotion="css 1vz9ino">
+                                    .css-1vz9ino {
+                                        width: 165px;
+                                        display: block;
+                                    }
+
+                                    @media screen and (min-width: 62em) {
+                                        .css-1vz9ino {
+                                            display: none;
+                                        }
+                                    }
+
+                                    @media screen and (min-width: 80em) {
+                                        .css-1vz9ino {
+                                            display: block;
+                                        }
+                                    }
+                                </style>
+                                <div class="css-1vz9ino"><svg viewBox="0 0 547 83" stroke="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M129 20.6C135.3 20.6 140.2 23 143.8 28C147.4 32.9 149.2 39.6 149.2 48.1C149.2 56.9 147.4 63.7 143.7 68.5C140 73.4 135 75.7 128.7 75.7C122.4 75.7 117.6 73.5 114 68.9H113L111.1 73.6C110.8 74.3 110.1 74.7 109.4 74.7H101.4C100.4 74.7 99.6 73.9 99.6 72.9V2.6C99.6 1.6 100.4 0.8 101.4 0.8H112.2C113.2 0.8 114 1.6 114 2.6V18C114 20.2 113.8 23.7 113.4 28.5H114C117.3 23.3 122.4 20.6 129 20.6ZM124.4 32.3C120.9 32.3 118.2 33.4 116.5 35.6C114.9 37.8 114 41.5 114 46.5V48.1C114 53.8 114.8 57.9 116.5 60.3C118.2 62.7 120.9 64 124.6 64C127.5 64 130 62.6 131.7 59.8C133.4 57.1 134.3 53 134.3 47.9C134.3 42.7 133.4 38.8 131.7 36.2C129.9 33.6 127.4 32.3 124.4 32.3ZM173 74.8H162.2C161.2 74.8 160.4 74 160.4 73V23.5C160.4 22.5 161.2 21.7 162.2 21.7H173C174 21.7 174.8 22.5 174.8 23.5V72.9C174.9 73.8 174 74.8 173 74.8ZM212.5 64.1C214.6 64.1 217.1 63.7 220.1 62.9C220.9 62.7 221.6 63.3 221.6 64.1V72.4C221.6 72.9 221.3 73.3 220.9 73.5C217.5 74.9 213.2 75.6 208.4 75.6C202.6 75.6 198.4 74.2 195.8 71.2C193.2 68.3 191.8 63.9 191.8 58.1V32.6H186.1C185.4 32.6 184.9 32.1 184.9 31.4V26.7C184.9 26.6 185 26.5 185 26.4L192.9 21.7L196.8 11.3C197 10.8 197.4 10.5 197.9 10.5H205.1C205.8 10.5 206.3 11 206.3 11.7V21.8H220.6C220.9 21.8 221.2 22.1 221.2 22.4V31.4C221.2 32.1 220.7 32.6 220 32.6H206.4V58C206.4 60 207 61.6 208.1 62.5C209.1 63.6 210.7 64.1 212.5 64.1ZM279.8 74.8C278.4 74.8 277.3 73.9 276.7 72.6L266.1 40.3C265.4 38 264.5 34.5 263.3 30H263L262 33.6L259.9 40.4L249 72.7C248.6 74 247.4 74.8 246 74.8C244.6 74.8 243.4 73.9 243 72.5L229.7 26C229.3 24.6 230.4 23.1 232 23.1H232.3C233.3 23.1 234.2 23.8 234.5 24.8L242.3 53.1C244.2 60.5 245.5 65.9 246.1 69.5H246.4C248.2 62.1 249.6 57.2 250.5 54.7L260.6 25.1C261 23.9 262.1 23.1 263.5 23.1C264.8 23.1 265.9 23.9 266.3 25.1L275.7 54.5C278 62 279.4 66.8 279.9 69.3H280.2C280.5 67.3 281.7 61.7 284 52.7L291.5 24.8C291.8 23.8 292.7 23.1 293.7 23.1C295.2 23.1 296.3 24.5 295.9 26L283.3 72.5C282.9 73.9 281.7 74.8 280.2 74.8H279.8ZM339.2 74.8C338.3 74.8 337.5 74.1 337.4 73.2L336.5 66.6H336C333.4 69.9 330.8 72.3 328 73.7C325.3 75.1 322 75.7 318.3 75.7C313.2 75.7 309.3 74.4 306.5 71.8C304 69.5 302.6 66.4 302.4 62.5C302 57.3 304.2 52.3 308.4 49.4C312.7 46.6 318.7 44.9 326.8 44.9L336.6 44.6V41.2C336.6 36.2 335.6 32.6 333.5 30.1C331.4 27.6 328.3 26.4 323.9 26.4C319.7 26.4 315.5 27.4 311.1 29.5C310 30 308.7 29.5 308.2 28.4C307.7 27.3 308.2 26 309.3 25.6C314.3 23.6 319.2 22.5 324.2 22.5C329.9 22.5 334.1 24 337 27C339.8 29.9 341.2 34.6 341.2 40.7V73.2C341.1 73.8 340.2 74.8 339.2 74.8ZM318.5 71.4C324.1 71.4 328.4 69.8 331.5 66.7C334.7 63.6 336.3 59.1 336.3 53.6V48.6L327.3 49C320 49.3 314.9 50.5 311.7 52.4C308.6 54.3 307 57.4 307 61.4C307 64.6 308 67.2 309.9 69C312.1 70.5 314.9 71.4 318.5 71.4ZM377.7 22.1C379.2 22.1 380.7 22.2 382.4 22.4C383.7 22.6 384.5 23.8 384.3 25C384.1 26.2 382.9 26.9 381.7 26.7C380.2 26.5 378.7 26.3 377.2 26.3C372.8 26.3 369.2 28.2 366.4 31.9C363.6 35.6 362.2 40.4 362.2 46V72.2C362.2 73.5 361.2 74.5 359.9 74.5C358.6 74.5 357.6 73.5 357.6 72.2V25.2C357.6 24.1 358.5 23.2 359.6 23.2C360.7 23.2 361.6 24 361.6 25.1L362 32.5H362.3C364.4 28.7 366.7 26 369.1 24.5C371.4 22.9 374.3 22.1 377.7 22.1ZM412.9 22.1C416.6 22.1 419.9 22.8 422.6 24.1C425.4 25.4 427.8 27.8 429.9 31.1H430.2C430 27 429.9 23.2 429.9 19.4V3.1C429.9 1.8 430.9 0.8 432.2 0.8C433.5 0.8 434.5 1.8 434.5 3.1V73C434.5 73.9 433.8 74.6 432.9 74.6C432.1 74.6 431.4 74 431.3 73.1L430.3 66.6H429.9C426 72.5 420.3 75.4 413 75.4C405.8 75.4 400.5 73.2 396.6 68.7C392.9 64.2 390.9 57.8 390.9 49.3C390.9 40.4 392.7 33.6 396.5 28.8C400.3 24.5 405.7 22.1 412.9 22.1ZM412.9 26.4C407.2 26.4 403 28.4 400.1 32.4C397.3 36.3 395.9 42 395.9 49.6C395.9 64.2 401.6 71.5 413 71.5C418.9 71.5 423.1 69.8 425.8 66.4C428.6 63 429.9 57.4 429.9 49.6V48.8C429.9 40.8 428.6 35.1 425.8 31.7C423.2 28.1 418.9 26.4 412.9 26.4ZM472.8 75.7C465.3 75.7 459.5 73.4 455.2 68.7C451 64.1 448.9 57.6 448.9 49.3C448.9 41 450.9 34.4 455 29.5C459.1 24.5 464.5 22 471.4 22C477.4 22 482.3 24.1 485.7 28.3C489.3 32.5 491 38.3 491 45.6V49.4H453.8C453.9 56.5 455.5 61.9 458.8 65.7C462.1 69.5 466.7 71.2 472.8 71.2C475.7 71.2 478.4 71 480.6 70.6C482.2 70.3 484.1 69.8 486.4 69C487.7 68.5 489.1 69.5 489.1 70.9C489.1 71.7 488.6 72.5 487.8 72.8C485.4 73.8 483.1 74.4 481 74.8C478.5 75.5 475.8 75.7 472.8 75.7ZM471.4 26.3C466.4 26.3 462.4 27.9 459.4 31.2C456.4 34.4 454.7 39.2 454.1 45.3H486.1C486.1 39.4 484.8 34.6 482.2 31.3C479.6 28 476 26.3 471.4 26.3ZM543.8 74.8C542.5 74.8 541.5 73.8 541.5 72.5V41.2C541.5 36 540.4 32.2 538.3 29.9C536 27.6 532.7 26.3 528.1 26.3C521.9 26.3 517.4 27.8 514.6 31C511.8 34.1 510.2 39.2 510.2 46.1V72.3C510.2 73.6 509.2 74.6 507.9 74.6C506.6 74.6 505.6 73.6 505.6 72.3V25.2C505.6 24 506.5 23.1 507.7 23.1C508.8 23.1 509.6 23.9 509.8 24.9L510.4 30.1H510.7C514.1 24.7 520 22 528.6 22C540.3 22 546.2 28.3 546.2 40.9V72.3C546.1 73.7 545 74.8 543.8 74.8ZM167.7 0C163 0 159.2 3.6 159.2 8.1V8.9C159.2 13.3 163.1 17 167.7 17C172.3 17 176.2 13.3 176.2 8.9V8.2C176.2 3.6 172.3 0 167.7 0ZM67.4 1.8C66.7 1.1 65.9 0.8 65 0.8H3.4C2.4 0.8 1.7 1.1 1 1.8C0.3 2.5 0 3.4 0 4.2V45.2C0 48.2 0.6 51.3 1.8 54.3C3 57.3 4.4 60 6.2 62.3C7.9 64.6 10.1 67 12.5 69.1C14.9 71.3 17.2 73.2 19.3 74.6C21.3 76 23.6 77.4 25.8 78.7C28 80 29.6 80.9 30.5 81.3C31.4 81.8 32.2 82.1 32.7 82.4C33.1 82.6 33.6 82.7 34.1 82.7C34.6 82.7 35.1 82.6 35.5 82.4C36.1 82.2 36.8 81.8 37.8 81.3C38.7 80.8 40.3 80 42.5 78.7C44.7 77.4 46.9 76 49 74.6C51 73.2 53.4 71.3 55.8 69.1C58.2 66.9 60.3 64.7 62.1 62.3C63.8 60 65.3 57.3 66.5 54.3C67.7 51.3 68.3 48.2 68.3 45.2V4.2C68.4 3.4 68.1 2.5 67.4 1.8ZM59.5 45.6C59.5 60.5 34.2 73.3 34.2 73.3V9.6H59.5C59.5 9.6 59.5 30.8 59.5 45.6Z"></path></svg></div>
+                                <style
+                                    data-emotion="css x6eqlr">.css-x6eqlr{width:36px;display:none;}@media screen and (min-width: 62em){.css-x6eqlr{display:block;}}@media screen and (min-width: 80em){.css-x6eqlr{display:none;}}</style>
+                                    <div class="css-x6eqlr"><svg viewBox="0 0 182 218" stroke="currentColor"><path d="M179.304 2.68965C177.498 0.887307 175.358 0 172.913 0H9.08608C6.61311 0 4.50136 0.887307 2.69526 2.68965C0.889156 4.49199 0 6.62707 0 9.06716V118.067C0 126.192 1.58381 134.261 4.75144 142.274C7.91906 150.26 11.8647 157.358 16.5606 163.569C21.2564 169.753 26.8414 175.798 33.3434 181.676C39.8454 187.554 45.8472 192.407 51.3211 196.289C56.8227 200.171 62.5467 203.831 68.5207 207.297C74.4947 210.763 78.746 213.092 81.2467 214.312C83.7475 215.532 85.7759 216.503 87.2763 217.14C88.4156 217.695 89.6382 218 90.9719 218C92.3056 218 93.5282 217.723 94.6675 217.14C96.1957 216.475 98.1963 215.532 100.725 214.312C103.226 213.092 107.477 210.735 113.451 207.297C119.425 203.831 125.149 200.171 130.651 196.289C136.152 192.407 142.154 187.527 148.656 181.676C155.158 175.798 160.743 169.78 165.439 163.569C170.135 157.358 174.053 150.287 177.248 142.274C180.416 134.288 181.999 126.219 181.999 118.067V9.09489C182.027 6.62707 181.11 4.49199 179.304 2.68965ZM158.187 119.093C158.187 158.551 90.9997 192.545 90.9997 192.545V23.3472H158.187C158.187 23.3472 158.187 79.6357 158.187 119.093Z"></path></svg></div>
+                            </div>
+                        </a>
+                        <style
+                            data-emotion="css-global 1eqawat">:host,:root{--chakra-ring-inset:var(--chakra-empty,/*!*/ /*!*/);--chakra-ring-offset-width:0px;--chakra-ring-offset-color:#fff;--chakra-ring-color:rgba(66, 153, 225, 0.6);--chakra-ring-offset-shadow:0 0 #0000;--chakra-ring-shadow:0
+                            0 #0000;--chakra-space-x-reverse:0;--chakra-space-y-reverse:0;--chakra-colors-transparent:transparent;--chakra-colors-current:currentColor;--chakra-colors-black:#000000;--chakra-colors-white:#FFFFFF;--chakra-colors-whiteAlpha-50:rgba(255,
+                            255, 255, 0.04);--chakra-colors-whiteAlpha-100:rgba(255, 255, 255, 0.06);--chakra-colors-whiteAlpha-200:rgba(255, 255, 255, 0.08);--chakra-colors-whiteAlpha-300:rgba(255, 255, 255, 0.16);--chakra-colors-whiteAlpha-400:rgba(255,
+                            255, 255, 0.24);--chakra-colors-whiteAlpha-500:rgba(255, 255, 255, 0.36);--chakra-colors-whiteAlpha-600:rgba(255, 255, 255, 0.48);--chakra-colors-whiteAlpha-700:rgba(255, 255, 255, 0.64);--chakra-colors-whiteAlpha-800:rgba(255,
+                            255, 255, 0.80);--chakra-colors-whiteAlpha-900:rgba(255, 255, 255, 0.92);--chakra-colors-blackAlpha-50:rgba(0, 0, 0, 0.04);--chakra-colors-blackAlpha-100:rgba(0, 0, 0, 0.06);--chakra-colors-blackAlpha-200:rgba(0, 0, 0, 0.08);--chakra-colors-blackAlpha-300:rgba(0,
+                            0, 0, 0.16);--chakra-colors-blackAlpha-400:rgba(0, 0, 0, 0.24);--chakra-colors-blackAlpha-500:rgba(0, 0, 0, 0.36);--chakra-colors-blackAlpha-600:rgba(0, 0, 0, 0.48);--chakra-colors-blackAlpha-700:rgba(0, 0, 0, 0.64);--chakra-colors-blackAlpha-800:rgba(0,
+                            0, 0, 0.80);--chakra-colors-blackAlpha-900:rgba(0, 0, 0, 0.92);--chakra-colors-gray-50:#F7FAFC;--chakra-colors-gray-100:#EDF2F7;--chakra-colors-gray-200:#E2E8F0;--chakra-colors-gray-300:#CBD5E0;--chakra-colors-gray-400:#A0AEC0;--chakra-colors-gray-500:#718096;--chakra-colors-gray-600:#4A5568;--chakra-colors-gray-700:#2D3748;--chakra-colors-gray-800:#1A202C;--chakra-colors-gray-900:#171923;--chakra-colors-red-50:#FFF5F5;--chakra-colors-red-100:#FED7D7;--chakra-colors-red-200:#FEB2B2;--chakra-colors-red-300:#FC8181;--chakra-colors-red-400:#F56565;--chakra-colors-red-500:#E53E3E;--chakra-colors-red-600:#C53030;--chakra-colors-red-700:#9B2C2C;--chakra-colors-red-800:#822727;--chakra-colors-red-900:#63171B;--chakra-colors-orange-50:#FFFAF0;--chakra-colors-orange-100:#FEEBC8;--chakra-colors-orange-200:#FBD38D;--chakra-colors-orange-300:#F6AD55;--chakra-colors-orange-400:#ED8936;--chakra-colors-orange-500:#DD6B20;--chakra-colors-orange-600:#C05621;--chakra-colors-orange-700:#9C4221;--chakra-colors-orange-800:#7B341E;--chakra-colors-orange-900:#652B19;--chakra-colors-yellow-50:#FFFFF0;--chakra-colors-yellow-100:#FEFCBF;--chakra-colors-yellow-200:#FAF089;--chakra-colors-yellow-300:#F6E05E;--chakra-colors-yellow-400:#ECC94B;--chakra-colors-yellow-500:#D69E2E;--chakra-colors-yellow-600:#B7791F;--chakra-colors-yellow-700:#975A16;--chakra-colors-yellow-800:#744210;--chakra-colors-yellow-900:#5F370E;--chakra-colors-green-50:#F0FFF4;--chakra-colors-green-100:#C6F6D5;--chakra-colors-green-200:#9AE6B4;--chakra-colors-green-300:#68D391;--chakra-colors-green-400:#48BB78;--chakra-colors-green-500:#38A169;--chakra-colors-green-600:#2F855A;--chakra-colors-green-700:#276749;--chakra-colors-green-800:#22543D;--chakra-colors-green-900:#1C4532;--chakra-colors-teal-50:#E6FFFA;--chakra-colors-teal-100:#B2F5EA;--chakra-colors-teal-200:#81E6D9;--chakra-colors-teal-300:#4FD1C5;--chakra-colors-teal-400:#38B2AC;--chakra-colors-teal-500:#319795;--chakra-colors-teal-600:#2C7A7B;--chakra-colors-teal-700:#285E61;--chakra-colors-teal-800:#234E52;--chakra-colors-teal-900:#1D4044;--chakra-colors-blue-50:#ebf8ff;--chakra-colors-blue-100:#bee3f8;--chakra-colors-blue-200:#90cdf4;--chakra-colors-blue-300:#63b3ed;--chakra-colors-blue-400:#4299e1;--chakra-colors-blue-500:#3182ce;--chakra-colors-blue-600:#2b6cb0;--chakra-colors-blue-700:#2c5282;--chakra-colors-blue-800:#2a4365;--chakra-colors-blue-900:#1A365D;--chakra-colors-cyan-50:#EDFDFD;--chakra-colors-cyan-100:#C4F1F9;--chakra-colors-cyan-200:#9DECF9;--chakra-colors-cyan-300:#76E4F7;--chakra-colors-cyan-400:#0BC5EA;--chakra-colors-cyan-500:#00B5D8;--chakra-colors-cyan-600:#00A3C4;--chakra-colors-cyan-700:#0987A0;--chakra-colors-cyan-800:#086F83;--chakra-colors-cyan-900:#065666;--chakra-colors-purple-50:#FAF5FF;--chakra-colors-purple-100:#E9D8FD;--chakra-colors-purple-200:#D6BCFA;--chakra-colors-purple-300:#B794F4;--chakra-colors-purple-400:#9F7AEA;--chakra-colors-purple-500:#805AD5;--chakra-colors-purple-600:#6B46C1;--chakra-colors-purple-700:#553C9A;--chakra-colors-purple-800:#44337A;--chakra-colors-purple-900:#322659;--chakra-colors-pink-50:#FFF5F7;--chakra-colors-pink-100:#FED7E2;--chakra-colors-pink-200:#FBB6CE;--chakra-colors-pink-300:#F687B3;--chakra-colors-pink-400:#ED64A6;--chakra-colors-pink-500:#D53F8C;--chakra-colors-pink-600:#B83280;--chakra-colors-pink-700:#97266D;--chakra-colors-pink-800:#702459;--chakra-colors-pink-900:#521B41;--chakra-colors-linkedin-50:#E8F4F9;--chakra-colors-linkedin-100:#CFEDFB;--chakra-colors-linkedin-200:#9BDAF3;--chakra-colors-linkedin-300:#68C7EC;--chakra-colors-linkedin-400:#34B3E4;--chakra-colors-linkedin-500:#00A0DC;--chakra-colors-linkedin-600:#008CC9;--chakra-colors-linkedin-700:#0077B5;--chakra-colors-linkedin-800:#005E93;--chakra-colors-linkedin-900:#004471;--chakra-colors-facebook-50:#E8F4F9;--chakra-colors-facebook-100:#D9DEE9;--chakra-colors-facebook-200:#B7C2DA;--chakra-colors-facebook-300:#6482C0;--chakra-colors-facebook-400:#4267B2;--chakra-colors-facebook-500:#385898;--chakra-colors-facebook-600:#314E89;--chakra-colors-facebook-700:#29487D;--chakra-colors-facebook-800:#223B67;--chakra-colors-facebook-900:#1E355B;--chakra-colors-messenger-50:#D0E6FF;--chakra-colors-messenger-100:#B9DAFF;--chakra-colors-messenger-200:#A2CDFF;--chakra-colors-messenger-300:#7AB8FF;--chakra-colors-messenger-400:#2E90FF;--chakra-colors-messenger-500:#0078FF;--chakra-colors-messenger-600:#0063D1;--chakra-colors-messenger-700:#0052AC;--chakra-colors-messenger-800:#003C7E;--chakra-colors-messenger-900:#002C5C;--chakra-colors-whatsapp-50:#dffeec;--chakra-colors-whatsapp-100:#b9f5d0;--chakra-colors-whatsapp-200:#90edb3;--chakra-colors-whatsapp-300:#65e495;--chakra-colors-whatsapp-400:#3cdd78;--chakra-colors-whatsapp-500:#22c35e;--chakra-colors-whatsapp-600:#179848;--chakra-colors-whatsapp-700:#0c6c33;--chakra-colors-whatsapp-800:#01421c;--chakra-colors-whatsapp-900:#001803;--chakra-colors-twitter-50:#E5F4FD;--chakra-colors-twitter-100:#C8E9FB;--chakra-colors-twitter-200:#A8DCFA;--chakra-colors-twitter-300:#83CDF7;--chakra-colors-twitter-400:#57BBF5;--chakra-colors-twitter-500:#1DA1F2;--chakra-colors-twitter-600:#1A94DA;--chakra-colors-twitter-700:#1681BF;--chakra-colors-twitter-800:#136B9E;--chakra-colors-twitter-900:#0D4D71;--chakra-colors-telegram-50:#E3F2F9;--chakra-colors-telegram-100:#C5E4F3;--chakra-colors-telegram-200:#A2D4EC;--chakra-colors-telegram-300:#7AC1E4;--chakra-colors-telegram-400:#47A9DA;--chakra-colors-telegram-500:#0088CC;--chakra-colors-telegram-600:#007AB8;--chakra-colors-telegram-700:#006BA1;--chakra-colors-telegram-800:#005885;--chakra-colors-telegram-900:#003F5E;--chakra-borders-none:0;--chakra-borders-1px:1px
+                            solid;--chakra-borders-2px:2px solid;--chakra-borders-4px:4px solid;--chakra-borders-8px:8px solid;--chakra-fonts-heading:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--chakra-fonts-mono:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--chakra-fontSizes-xs:0.75rem;--chakra-fontSizes-sm:0.875rem;--chakra-fontSizes-md:1rem;--chakra-fontSizes-lg:1.125rem;--chakra-fontSizes-xl:1.25rem;--chakra-fontSizes-2xl:1.5rem;--chakra-fontSizes-3xl:1.875rem;--chakra-fontSizes-4xl:2.25rem;--chakra-fontSizes-5xl:3rem;--chakra-fontSizes-6xl:3.75rem;--chakra-fontSizes-7xl:4.5rem;--chakra-fontSizes-8xl:6rem;--chakra-fontSizes-9xl:8rem;--chakra-fontWeights-hairline:100;--chakra-fontWeights-thin:200;--chakra-fontWeights-light:300;--chakra-fontWeights-normal:400;--chakra-fontWeights-medium:500;--chakra-fontWeights-semibold:600;--chakra-fontWeights-bold:700;--chakra-fontWeights-extrabold:800;--chakra-fontWeights-black:900;--chakra-letterSpacings-tighter:-0.05em;--chakra-letterSpacings-tight:-0.025em;--chakra-letterSpacings-normal:0;--chakra-letterSpacings-wide:0.025em;--chakra-letterSpacings-wider:0.05em;--chakra-letterSpacings-widest:0.1em;--chakra-lineHeights-3:.75rem;--chakra-lineHeights-4:1rem;--chakra-lineHeights-5:1.25rem;--chakra-lineHeights-6:1.5rem;--chakra-lineHeights-7:1.75rem;--chakra-lineHeights-8:2rem;--chakra-lineHeights-9:2.25rem;--chakra-lineHeights-10:2.5rem;--chakra-lineHeights-normal:normal;--chakra-lineHeights-none:1;--chakra-lineHeights-shorter:1.25;--chakra-lineHeights-short:1.375;--chakra-lineHeights-base:1.5;--chakra-lineHeights-tall:1.625;--chakra-lineHeights-taller:2;--chakra-radii-none:0;--chakra-radii-sm:0.125rem;--chakra-radii-base:0.25rem;--chakra-radii-md:0.375rem;--chakra-radii-lg:0.5rem;--chakra-radii-xl:0.75rem;--chakra-radii-2xl:1rem;--chakra-radii-3xl:1.5rem;--chakra-radii-full:9999px;--chakra-space-1:0.25rem;--chakra-space-2:0.5rem;--chakra-space-3:0.75rem;--chakra-space-4:1rem;--chakra-space-5:1.25rem;--chakra-space-6:1.5rem;--chakra-space-7:1.75rem;--chakra-space-8:2rem;--chakra-space-9:2.25rem;--chakra-space-10:2.5rem;--chakra-space-12:3rem;--chakra-space-14:3.5rem;--chakra-space-16:4rem;--chakra-space-20:5rem;--chakra-space-24:6rem;--chakra-space-28:7rem;--chakra-space-32:8rem;--chakra-space-36:9rem;--chakra-space-40:10rem;--chakra-space-44:11rem;--chakra-space-48:12rem;--chakra-space-52:13rem;--chakra-space-56:14rem;--chakra-space-60:15rem;--chakra-space-64:16rem;--chakra-space-72:18rem;--chakra-space-80:20rem;--chakra-space-96:24rem;--chakra-space-px:1px;--chakra-space-0-5:0.125rem;--chakra-space-1-5:0.375rem;--chakra-space-2-5:0.625rem;--chakra-space-3-5:0.875rem;--chakra-shadows-xs:0
+                            0 0 1px rgba(0, 0, 0, 0.05);--chakra-shadows-sm:0 1px 2px 0 rgba(0, 0, 0, 0.05);--chakra-shadows-base:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);--chakra-shadows-md:0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px
+                            4px -1px rgba(0, 0, 0, 0.06);--chakra-shadows-lg:0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);--chakra-shadows-xl:0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);--chakra-shadows-2xl:0
+                            25px 50px -12px rgba(0, 0, 0, 0.25);--chakra-shadows-outline:0 0 0 3px rgba(66, 153, 225, 0.6);--chakra-shadows-inner:inset 0 2px 4px 0 rgba(0,0,0,0.06);--chakra-shadows-none:none;--chakra-shadows-dark-lg:rgba(0, 0, 0, 0.1)
+                            0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;--chakra-sizes-1:0.25rem;--chakra-sizes-2:0.5rem;--chakra-sizes-3:0.75rem;--chakra-sizes-4:1rem;--chakra-sizes-5:1.25rem;--chakra-sizes-6:1.5rem;--chakra-sizes-7:1.75rem;--chakra-sizes-8:2rem;--chakra-sizes-9:2.25rem;--chakra-sizes-10:2.5rem;--chakra-sizes-12:3rem;--chakra-sizes-14:3.5rem;--chakra-sizes-16:4rem;--chakra-sizes-20:5rem;--chakra-sizes-24:6rem;--chakra-sizes-28:7rem;--chakra-sizes-32:8rem;--chakra-sizes-36:9rem;--chakra-sizes-40:10rem;--chakra-sizes-44:11rem;--chakra-sizes-48:12rem;--chakra-sizes-52:13rem;--chakra-sizes-56:14rem;--chakra-sizes-60:15rem;--chakra-sizes-64:16rem;--chakra-sizes-72:18rem;--chakra-sizes-80:20rem;--chakra-sizes-96:24rem;--chakra-sizes-px:1px;--chakra-sizes-0-5:0.125rem;--chakra-sizes-1-5:0.375rem;--chakra-sizes-2-5:0.625rem;--chakra-sizes-3-5:0.875rem;--chakra-sizes-max:max-content;--chakra-sizes-min:min-content;--chakra-sizes-full:100%;--chakra-sizes-3xs:14rem;--chakra-sizes-2xs:16rem;--chakra-sizes-xs:20rem;--chakra-sizes-sm:24rem;--chakra-sizes-md:28rem;--chakra-sizes-lg:32rem;--chakra-sizes-xl:36rem;--chakra-sizes-2xl:42rem;--chakra-sizes-3xl:48rem;--chakra-sizes-4xl:56rem;--chakra-sizes-5xl:64rem;--chakra-sizes-6xl:72rem;--chakra-sizes-7xl:80rem;--chakra-sizes-8xl:90rem;--chakra-sizes-container-sm:640px;--chakra-sizes-container-md:768px;--chakra-sizes-container-lg:1024px;--chakra-sizes-container-xl:1280px;--chakra-zIndices-hide:-1;--chakra-zIndices-auto:auto;--chakra-zIndices-base:0;--chakra-zIndices-docked:10;--chakra-zIndices-dropdown:1000;--chakra-zIndices-sticky:1100;--chakra-zIndices-banner:1200;--chakra-zIndices-overlay:1300;--chakra-zIndices-modal:1400;--chakra-zIndices-popover:1500;--chakra-zIndices-skipLink:1600;--chakra-zIndices-toast:1700;--chakra-zIndices-tooltip:1800;--chakra-transition-property-common:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;--chakra-transition-property-colors:background-color,border-color,color,fill,stroke;--chakra-transition-property-dimensions:width,height;--chakra-transition-property-position:left,right,top,bottom;--chakra-transition-property-background:background-color,background-image,background-position;--chakra-transition-easing-ease-in:cubic-bezier(0.4,
+                            0, 1, 1);--chakra-transition-easing-ease-out:cubic-bezier(0, 0, 0.2, 1);--chakra-transition-easing-ease-in-out:cubic-bezier(0.4, 0, 0.2, 1);--chakra-transition-duration-ultra-fast:50ms;--chakra-transition-duration-faster:100ms;--chakra-transition-duration-fast:150ms;--chakra-transition-duration-normal:200ms;--chakra-transition-duration-slow:300ms;--chakra-transition-duration-slower:400ms;--chakra-transition-duration-ultra-slow:500ms;--chakra-blur-none:0;--chakra-blur-sm:4px;--chakra-blur-base:8px;--chakra-blur-md:12px;--chakra-blur-lg:16px;--chakra-blur-xl:24px;--chakra-blur-2xl:40px;--chakra-blur-3xl:64px;}</style>
+                            <style
+                                data-emotion="css-global 1jqlf9g">html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;touch-action:manipulation;}body{position:relative;min-height:100%;font-feature-settings:'kern';}*,*::before,*::after{border-width:0;border-style:solid;box-sizing:border-box;}main{display:block;}hr{border-top-width:1px;box-sizing:content-box;height:0;overflow:visible;}pre,code,kbd,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:1em;}a{background-color:transparent;color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit;}abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline
+                                dotted;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;}b,strong{font-weight:bold;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,input{overflow:visible;}button,select{text-transform:none;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;}fieldset{padding:0.35em
+                                0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none!important;}input[type="number"]{-moz-appearance:textfield;}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}[type="search"]::-webkit-search-decoration{-webkit-appearance:none!important;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:-webkit-box;display:-webkit-list-item;display:-ms-list-itembox;display:list-item;}template{display:none;}[hidden]{display:none!important;}body,blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0;}button{background:transparent;padding:0;}fieldset{margin:0;padding:0;}ol,ul{margin:0;padding:0;}textarea{resize:vertical;}button,[role="button"]{cursor:pointer;}button::-moz-focus-inner{border:0!important;}table{border-collapse:collapse;}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit;}img,svg,video,canvas,audio,iframe,embed,object{display:block;}img,video{max-width:100%;height:auto;}[data-js-focus-visible]
+                                :focus:not([data-focus-visible-added]){outline:none;box-shadow:none;}select::-ms-expand{display:none;}</style>
+                                <style data-emotion="css-global 1baqkrf">
+                                    body {
+                                        font-family: var(--chakra-fonts-body);
+                                        color: var(--chakra-colors-gray-800);
+                                        background: var(--chakra-colors-white);
+                                        transition-property: background-color;
+                                        transition-duration: var(--chakra-transition-duration-normal);
+                                        line-height: var(--chakra-lineHeights-base);
+                                    }
+
+                                    *::-webkit-input-placeholder {
+                                        color: var(--chakra-colors-gray-400);
+                                    }
+
+                                    *::-moz-placeholder {
+                                        color: var(--chakra-colors-gray-400);
+                                    }
+
+                                    *:-ms-input-placeholder {
+                                        color: var(--chakra-colors-gray-400);
+                                    }
+
+                                    *::placeholder {
+                                        color: var(--chakra-colors-gray-400);
+                                    }
+
+                                    *,
+                                    *::before,
+                                    ::after {
+                                        border-color: var(--chakra-colors-gray-200);
+                                        word-wrap: break-word;
+                                    }
+                                </style><span></span></div>
+            </header>
+            <style data-emotion="css 1e8sch1">
+                .css-1e8sch1 {
+                    background: var(--chakra-colors-transparent);
+                }
+            </style>
+            <main class="css-1e8sch1">
+                <style data-emotion="css ykett8">
+                    .css-ykett8 {
+                        width: 100%;
+                        -webkit-margin-start: auto;
+                        margin-inline-start: auto;
+                        -webkit-margin-end: auto;
+                        margin-inline-end: auto;
+                        max-width: 100%;
+                        -webkit-padding-start: var(--chakra-space-6);
+                        padding-inline-start: var(--chakra-space-6);
+                        -webkit-padding-end: var(--chakra-space-6);
+                        padding-inline-end: var(--chakra-space-6);
+                        background: #175ddc;
+                        padding-top: 2rem;
+                        padding-bottom: 2rem;
+                    }
+
+                    @media screen and (min-width: 30em) {
+                        .css-ykett8 {
+                            padding-top: 3.5rem;
+                            padding-bottom: 3.5rem;
+                        }
+                    }
+
+                    @media screen and (min-width: 48em) {
+                        .css-ykett8 {
+                            -webkit-padding-start: var(--chakra-space-8);
+                            padding-inline-start: var(--chakra-space-8);
+                            -webkit-padding-end: var(--chakra-space-8);
+                            padding-inline-end: var(--chakra-space-8);
+                            padding-top: 5rem;
+                            padding-bottom: 5rem;
+                        }
+                    }
+                </style>
+                <section class="chakra-container css-ykett8">
+                    <style data-emotion="css 1uzrs19">
+                        .css-1uzrs19 {
+                            width: 100%;
+                            -webkit-margin-start: auto;
+                            margin-inline-start: auto;
+                            -webkit-margin-end: auto;
+                            margin-inline-end: auto;
+                            max-width: var(--chakra-sizes-xl);
+                            -webkit-padding-start: 0px;
+                            padding-inline-start: 0px;
+                            -webkit-padding-end: 0px;
+                            padding-inline-end: 0px;
+                        }
+
+                        @media screen and (min-width: 30em) {
+                            .css-1uzrs19 {
+                                width: 95%;
+                                -webkit-padding-start: var(--chakra-space-1);
+                                padding-inline-start: var(--chakra-space-1);
+                                -webkit-padding-end: var(--chakra-space-1);
+                                padding-inline-end: var(--chakra-space-1);
+                            }
+                        }
+
+                        @media screen and (min-width: 48em) {
+                            .css-1uzrs19 {
+                                width: 85%;
+                                max-width: var(--chakra-sizes-7xl);
+                                -webkit-padding-start: var(--chakra-space-8);
+                                padding-inline-start: var(--chakra-space-8);
+                                -webkit-padding-end: var(--chakra-space-8);
+                                padding-inline-end: var(--chakra-space-8);
+                            }
+                        }
+                    </style>
+                    <section class="chakra-container css-1uzrs19">
+                        <style data-emotion="css 1xtyel8">
+                            .css-1xtyel8 {
+                                padding: var(--chakra-space-6);
+                                background: var(--chakra-colors-white);
+                                border-radius: var(--chakra-radii-md);
+                            }
+
+                            @media screen and (min-width: 48em) {
+                                .css-1xtyel8 {
+                                    padding: var(--chakra-space-12);
+                                }
+                            }
+                        </style>
+                        <div class="css-1xtyel8">
+                            <style data-emotion="css 1q65zyk">
+                                .css-1q65zyk {
+                                    font-family: var(--chakra-fonts-heading);
+                                    font-weight: 500;
+                                    font-size: 1.5rem;
+                                    line-height: 1.33;
+                                    margin-bottom: var(--chakra-space-2);
+                                }
+
+                                @media screen and (min-width: 48em) {
+                                    .css-1q65zyk {
+                                        font-size: 2.25rem;
+                                        line-height: 1.2;
+                                    }
+                                }
+                            </style>
+                            <h1 class="chakra-heading css-1q65zyk">Password Generator</h1>
+                            <style data-emotion="css 1413s44">
+                                .css-1413s44 {
+                                    font-size: 16px;
+                                    line-height: 1.5;
+                                    margin-bottom: 1rem;
+                                }
+
+                                @media screen and (min-width: 48em) {
+                                    .css-1413s44 {
+                                        font-size: 18px;
+                                    }
+                                }
+                            </style>
+                            <p class="chakra-text css-1413s44">Need a password? Try the Bitwarden Strong Password Generator. Generate secure, random passwords to stay safe online.</p>
+                            <style data-emotion="css 2imjyh">
+                                .css-2imjyh {
+                                    display: -webkit-box;
+                                    display: -webkit-flex;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-flex-wrap: wrap;
+                                    -webkit-flex-wrap: wrap;
+                                    -ms-flex-wrap: wrap;
+                                    flex-wrap: wrap;
+                                }
+                            </style>
+                            <div class="css-2imjyh">
+                                <style data-emotion="css 1i9rye8">
+                                    .css-1i9rye8 {
+                                        margin-bottom: var(--chakra-space-4);
+                                        width: 100%;
+                                    }
+
+                                    @media screen and (min-width: 48em) {
+                                        .css-1i9rye8 {
+                                            width: 49%;
+                                        }
+                                    }
+                                </style>
+                                <div class="css-1i9rye8">
+                                    <style data-emotion="css 5ipb4b">
+                                        .css-5ipb4b {
+                                            font-family: var(--chakra-fonts-heading);
+                                            font-weight: 500;
+                                            font-size: 1.25rem;
+                                            line-height: 1.33;
+                                        }
+
+                                        @media screen and (min-width: 48em) {
+                                            .css-5ipb4b {
+                                                line-height: 1.2;
+                                            }
+                                        }
+                                    </style>
+                                    <h5 class="chakra-heading css-5ipb4b">Your password‘s score:
+                                        <!-- -->
+                                    </h5>
+                                    <style data-emotion="css 2tm5mz">
+                                        .css-2tm5mz {
+                                            font-size: var(--chakra-fontSizes-2xl);
+                                            line-height: 1.5;
+                                            font-weight: 600;
+                                            color: #dc3545;
+                                        }
+                                    </style>
+                                    <div class="chakra-text css-2tm5mz">very weak</div>
+                                </div>
+                                <style data-emotion="css 15evmfw">
+                                    .css-15evmfw {
+                                        font-size: 18px;
+                                        line-height: 1.5;
+                                        margin-bottom: var(--chakra-space-4);
+                                        width: 100%;
+                                    }
+
+                                    @media screen and (min-width: 48em) {
+                                        .css-15evmfw {
+                                            width: 49%;
+                                        }
+                                    }
+                                </style>
+                                <p class="chakra-text css-15evmfw">
+                                    <h5 class="chakra-heading css-5ipb4b">Estimated time to crack:
+                                        <!-- -->
+                                    </h5>
+                                    <style data-emotion="css ndtx25">
+                                        .css-ndtx25 {
+                                            font-size: var(--chakra-fontSizes-2xl);
+                                            line-height: 1.5;
+                                            font-weight: 600;
+                                            color: #175ddc;
+                                        }
+                                    </style>
+                                    <div class="chakra-text css-ndtx25">less than a second</div>
+                                </p>
+                            </div>
+                            <style data-emotion="css 1kjk7bw">
+                                .css-1kjk7bw {
+                                    text-align: center;
+                                    min-height: 48px;
+                                    font-family: var(--chakra-fonts-monospace);
+                                    padding-top: var(--chakra-space-3);
+                                    padding-bottom: var(--chakra-space-3);
+                                    background: #ecf0f5;
+                                    border: var(--chakra-borders-1px);
+                                    border-color: #dee2e6;
+                                    border-radius: var(--chakra-radii-md);
+                                    margin-top: var(--chakra-space-3);
+                                    margin-bottom: var(--chakra-space-3);
+                                }
+                            </style>
+                            <div class="css-1kjk7bw"></div>
+                            <style data-emotion="css vxgrp0">
+                                .css-vxgrp0 {
+                                    display: -webkit-box;
+                                    display: -webkit-flex;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-box-pack: justify;
+                                    -webkit-justify-content: space-between;
+                                    justify-content: space-between;
+                                    -webkit-box-flex-wrap: wrap;
+                                    -webkit-flex-wrap: wrap;
+                                    -ms-flex-wrap: wrap;
+                                    flex-wrap: wrap;
+                                }
+                            </style>
+                            <div class="css-vxgrp0">
+                                <style data-emotion="css 93390">
+                                    .css-93390 {
+                                        display: -webkit-inline-box;
+                                        display: -webkit-inline-flex;
+                                        display: -ms-inline-flexbox;
+                                        display: inline-flex;
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        -ms-appearance: none;
+                                        appearance: none;
+                                        -webkit-align-items: center;
+                                        -webkit-box-align: center;
+                                        -ms-flex-align: center;
+                                        align-items: center;
+                                        -webkit-box-pack: center;
+                                        -ms-flex-pack: center;
+                                        -webkit-justify-content: center;
+                                        justify-content: center;
+                                        -webkit-user-select: none;
+                                        -moz-user-select: none;
+                                        -ms-user-select: none;
+                                        user-select: none;
+                                        position: relative;
+                                        white-space: nowrap;
+                                        vertical-align: middle;
+                                        outline: 2px solid transparent;
+                                        outline-offset: 2px;
+                                        width: 100%;
+                                        line-height: 1.2;
+                                        border-radius: var(--chakra-radii-md);
+                                        font-weight: var(--chakra-fontWeights-semibold);
+                                        transition-property: var(--chakra-transition-property-common);
+                                        transition-duration: var(--chakra-transition-duration-normal);
+                                        height: var(--chakra-sizes-10);
+                                        min-width: var(--chakra-sizes-10);
+                                        font-size: var(--chakra-fontSizes-md);
+                                        -webkit-padding-start: var(--chakra-space-4);
+                                        padding-inline-start: var(--chakra-space-4);
+                                        -webkit-padding-end: var(--chakra-space-4);
+                                        padding-inline-end: var(--chakra-space-4);
+                                        background: var(--chakra-colors-gray-100);
+                                        margin-top: var(--chakra-space-2);
+                                        margin-bottom: var(--chakra-space-2);
+                                        background-color: var(--chakra-colors-primary);
+                                        color: #ffffff;
+                                    }
+
+                                    .css-93390:focus,
+                                    .css-93390[data-focus] {
+                                        box-shadow: var(--chakra-shadows-outline);
+                                    }
+
+                                    .css-93390[disabled],
+                                    .css-93390[aria-disabled=true],
+                                    .css-93390[data-disabled] {
+                                        opacity: 0.4;
+                                        cursor: not-allowed;
+                                        box-shadow: var(--chakra-shadows-none);
+                                    }
+
+                                    .css-93390:hover,
+                                    .css-93390[data-hover] {
+                                        background-color: var(--chakra-colors-secondary);
+                                    }
+
+                                    .css-93390:active,
+                                    .css-93390[data-active] {
+                                        background: var(--chakra-colors-gray-300);
+                                    }
+
+                                    @media screen and (min-width: 48em) {
+                                        .css-93390 {
+                                            width: 49%;
+                                        }
+                                    }
+                                </style><button type="button" class="chakra-button css-93390"><style data-emotion="css 63ps53">.css-63ps53{font-size:inherit;line-height:1.5;font-weight:400;margin-right:var(--chakra-space-1);font-family:bwi-font;}</style><span class="chakra-text css-63ps53"></span>Regenerate</button>
+                                <style
+                                    data-emotion="css 1gyak1t">.css-1gyak1t{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;white-space:nowrap;vertical-align:middle;outline:2px
+                                    solid transparent;outline-offset:2px;width:100%;line-height:1.2;border-radius:var(--chakra-radii-md);font-weight:var(--chakra-fontWeights-semibold);transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-normal);height:var(--chakra-sizes-10);min-width:var(--chakra-sizes-10);font-size:var(--chakra-fontSizes-md);-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);background:var(--chakra-colors-gray-100);margin-top:var(--chakra-space-2);margin-bottom:var(--chakra-space-2);background-color:#1a3b66;color:#ffffff;}.css-1gyak1t:focus,.css-1gyak1t[data-focus]{box-shadow:var(--chakra-shadows-outline);}.css-1gyak1t[disabled],.css-1gyak1t[aria-disabled=true],.css-1gyak1t[data-disabled]{opacity:0.4;cursor:not-allowed;box-shadow:var(--chakra-shadows-none);}.css-1gyak1t:hover,.css-1gyak1t[data-hover]{background-color:#122948;}.css-1gyak1t:active,.css-1gyak1t[data-active]{background:var(--chakra-colors-gray-300);}@media
+                                    screen and (min-width: 48em){.css-1gyak1t{width:49%;}}</style><button type="button" class="chakra-button css-1gyak1t"><span class="chakra-text css-63ps53"></span>Copy to Clipboard</button></div>
+                            <style data-emotion="css 9np84r">
+                                .css-9np84r {
+                                    padding: 2rem;
+                                    background: #ecf0f5;
+                                    border-radius: var(--chakra-radii-md);
+                                    margin-top: 1rem;
+                                }
+                            </style>
+                            <div class="css-9np84r">
+                                <div class="css-vxgrp0">
+                                    <style data-emotion="css 189dhzu">
+                                        .css-189dhzu {
+                                            width: 100%;
+                                        }
+
+                                        @media screen and (min-width: 48em) {
+                                            .css-189dhzu {
+                                                width: 50%;
+                                            }
+                                        }
+                                    </style>
+                                    <div class="css-189dhzu">
+                                        <style data-emotion="css ry9wu5">
+                                            .css-ry9wu5 {
+                                                font-family: var(--chakra-fonts-heading);
+                                                font-weight: 500;
+                                                font-size: 1.25rem;
+                                                line-height: 1.33;
+                                                margin-bottom: var(--chakra-space-2);
+                                            }
+
+                                            @media screen and (min-width: 48em) {
+                                                .css-ry9wu5 {
+                                                    line-height: 1.2;
+                                                }
+                                            }
+                                        </style>
+                                        <h5 class="chakra-heading css-ry9wu5">Type</h5>
+                                        <div role="radiogroup" class="chakra-radio-group css-0">
+                                            <style data-emotion="css n21gh5">
+                                                .css-n21gh5 {
+                                                    display: -webkit-box;
+                                                    display: -webkit-flex;
+                                                    display: -ms-flexbox;
+                                                    display: flex;
+                                                    -webkit-flex-direction: column;
+                                                    -ms-flex-direction: column;
+                                                    flex-direction: column;
+                                                }
+
+                                                .css-n21gh5>*:not(style)~*:not(style) {
+                                                    margin-top: 0.5rem;
+                                                    -webkit-margin-end: 0px;
+                                                    margin-inline-end: 0px;
+                                                    margin-bottom: 0px;
+                                                    -webkit-margin-start: 0px;
+                                                    margin-inline-start: 0px;
+                                                }
+                                            </style>
+                                            <div class="chakra-stack css-n21gh5">
+                                                <style data-emotion="css 1pw4d56">
+                                                    .css-1pw4d56 {
+                                                        display: -webkit-inline-box;
+                                                        display: -webkit-inline-flex;
+                                                        display: -ms-inline-flexbox;
+                                                        display: inline-flex;
+                                                        -webkit-align-items: center;
+                                                        -webkit-box-align: center;
+                                                        -ms-flex-align: center;
+                                                        align-items: center;
+                                                        vertical-align: top;
+                                                        cursor: pointer;
+                                                    }
+                                                </style><label class="chakra-radio css-1pw4d56" data-checked=""><input type="radio" class="chakra-radio__input" id="radio-1" name="radio-1" value="password" checked="" style="border:0px;clip:rect(0px, 0px, 0px, 0px);height:1px;width:1px;margin:-1px;padding:0px;overflow:hidden;white-space:nowrap;position:absolute"/><style data-emotion="css 1rggdzb">.css-1rggdzb{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:var(--chakra-sizes-4);transition-property:box-shadow;transition-duration:var(--chakra-transition-duration-normal);border:2px solid;border-radius:var(--chakra-radii-full);border-color:inherit;color:var(--chakra-colors-white);height:var(--chakra-sizes-4);}.css-1rggdzb[aria-checked=true],.css-1rggdzb[data-checked]{background:var(--chakra-colors-blue-500);border-color:var(--chakra-colors-blue-500);color:var(--chakra-colors-white);}.css-1rggdzb[aria-checked=true]:hover,.css-1rggdzb[data-checked]:hover,.css-1rggdzb[aria-checked=true][data-hover],.css-1rggdzb[data-checked][data-hover]{background:var(--chakra-colors-blue-600);border-color:var(--chakra-colors-blue-600);}.css-1rggdzb[aria-checked=true][disabled],.css-1rggdzb[data-checked][disabled],.css-1rggdzb[aria-checked=true][aria-disabled=true],.css-1rggdzb[data-checked][aria-disabled=true],.css-1rggdzb[aria-checked=true][data-disabled],.css-1rggdzb[data-checked][data-disabled]{border-color:var(--chakra-colors-gray-200);background:var(--chakra-colors-gray-200);color:var(--chakra-colors-gray-500);}.css-1rggdzb[aria-checked=true]::before,.css-1rggdzb[data-checked]::before{content:"";display:inline-block;position:relative;width:50%;height:50%;border-radius:50%;background:currentColor;}.css-1rggdzb:indeterminate,.css-1rggdzb[aria-checked=mixed],.css-1rggdzb[data-indeterminate]{background:var(--chakra-colors-blue-500);border-color:var(--chakra-colors-blue-500);color:var(--chakra-colors-white);}.css-1rggdzb[disabled],.css-1rggdzb[aria-disabled=true],.css-1rggdzb[data-disabled]{background:var(--chakra-colors-gray-100);border-color:var(--chakra-colors-gray-100);}.css-1rggdzb:focus,.css-1rggdzb[data-focus]{box-shadow:var(--chakra-shadows-outline);}.css-1rggdzb[aria-invalid=true],.css-1rggdzb[data-invalid]{border-color:var(--chakra-colors-red-500);}</style><span class="chakra-radio__control css-1rggdzb" data-checked="" aria-hidden="true"></span><style data-emotion="css 1i66d7g">.css-1i66d7g{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-margin-start:0.5rem;margin-inline-start:0.5rem;font-size:var(--chakra-fontSizes-md);}.css-1i66d7g[disabled],.css-1i66d7g[aria-disabled=true],.css-1i66d7g[data-disabled]{opacity:0.4;}</style><span class="chakra-radio__label css-1i66d7g" data-checked="">Password</span></label>
+                                                <label
+                                                    class="chakra-radio css-1pw4d56"><input type="radio" class="chakra-radio__input" id="radio-1" name="radio-1" value="passphrase" style="border:0px;clip:rect(0px, 0px, 0px, 0px);height:1px;width:1px;margin:-1px;padding:0px;overflow:hidden;white-space:nowrap;position:absolute"
+                                                    /><span class="chakra-radio__control css-1rggdzb" aria-hidden="true"></span><span class="chakra-radio__label css-1i66d7g">Passphrase</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <style data-emotion="css 1cj47ry">
+                                        .css-1cj47ry {
+                                            width: 100%;
+                                            margin-top: var(--chakra-space-3);
+                                        }
+
+                                        @media screen and (min-width: 48em) {
+                                            .css-1cj47ry {
+                                                width: 50%;
+                                                margin-top: 0px;
+                                            }
+                                        }
+                                    </style>
+                                    <div class="css-1cj47ry">
+                                        <h5 class="chakra-heading css-ry9wu5">Length</h5>
+                                        <style data-emotion="css 1mckd31">
+                                            .css-1mckd31 {
+                                                display: -webkit-box;
+                                                display: -webkit-flex;
+                                                display: -ms-flexbox;
+                                                display: flex;
+                                                -webkit-align-items: baseline;
+                                                -webkit-box-align: baseline;
+                                                -ms-flex-align: baseline;
+                                                align-items: baseline;
+                                                -webkit-box-flex-wrap: wrap;
+                                                -webkit-flex-wrap: wrap;
+                                                -ms-flex-wrap: wrap;
+                                                flex-wrap: wrap;
+                                                width: auto;
+                                                max-width: 260px;
+                                            }
+                                        </style>
+                                        <div class="css-1mckd31">
+                                            <style data-emotion="css x6ghk8">
+                                                .css-x6ghk8 {
+                                                    font-size: 18px;
+                                                    line-height: 1.5;
+                                                    -webkit-flex: 1;
+                                                    -ms-flex: 1;
+                                                    flex: 1;
+                                                    -webkit-box-flex-wrap: nowrap;
+                                                    -webkit-flex-wrap: nowrap;
+                                                    -ms-flex-wrap: nowrap;
+                                                    flex-wrap: nowrap;
+                                                }
+                                            </style>
+                                            <p class="chakra-text css-x6ghk8">Characters:
+                                                <!-- -->
+                                                <!-- -->14</p>
+                                            <style data-emotion="css 8hqin7">
+                                                .css-8hqin7 {
+                                                    width: auto;
+                                                    min-width: 100px;
+                                                    max-width: 330px;
+                                                }
+                                            </style>
+                                            <div class="css-8hqin7">
+                                                <style data-emotion="css 7x0156">
+                                                    .css-7x0156 {
+                                                        display: inline-block;
+                                                        position: relative;
+                                                        cursor: pointer;
+                                                        width: 100%;
+                                                        margin-left: var(--chakra-space-2);
+                                                        margin-right: auto;
+                                                    }
+
+                                                    .css-7x0156[disabled],
+                                                    .css-7x0156[aria-disabled=true],
+                                                    .css-7x0156[data-disabled] {
+                                                        opacity: 0.6;
+                                                        cursor: default;
+                                                        pointer-events: none;
+                                                    }
+                                                </style>
+                                                <div tabindex="-1" style="position:relative;touch-action:none;-webkit-tap-highlight-color:rgba(0,0,0,0);user-select:none;outline:0;padding-top:0;padding-bottom:0" class="chakra-slider css-7x0156">
+                                                    <style data-emotion="css 1mmphwh">
+                                                        .css-1mmphwh {
+                                                            overflow: hidden;
+                                                            border-radius: var(--chakra-radii-sm);
+                                                            background: var(--chakra-colors-gray-200);
+                                                            height: 4px;
+                                                            background-color: var(--chakra-colors-primary);
+                                                        }
+
+                                                        .css-1mmphwh[disabled],
+                                                        .css-1mmphwh[aria-disabled=true],
+                                                        .css-1mmphwh[data-disabled] {
+                                                            background: var(--chakra-colors-gray-300);
+                                                        }
+                                                    </style>
+                                                    <div id="slider-track-1" style="position:absolute;top:50%;transform:translateY(-50%);width:100%" class="chakra-slider__track css-1mmphwh">
+                                                        <style data-emotion="css usvwh9">
+                                                            .css-usvwh9 {
+                                                                width: inherit;
+                                                                height: inherit;
+                                                                background: var(--chakra-colors-blue-500);
+                                                                background-color: var(--chakra-colors-primary);
+                                                            }
+                                                        </style>
+                                                        <div style="position:absolute;top:50%;transform:translateY(-50%);width:7.317073170731708%;left:0%" class="chakra-slider__filled-track css-usvwh9"></div>
+                                                    </div>
+                                                    <style data-emotion="css j9g1p9">
+                                                        .css-j9g1p9 {
+                                                            display: -webkit-box;
+                                                            display: -webkit-flex;
+                                                            display: -ms-flexbox;
+                                                            display: flex;
+                                                            -webkit-align-items: center;
+                                                            -webkit-box-align: center;
+                                                            -ms-flex-align: center;
+                                                            align-items: center;
+                                                            -webkit-box-pack: center;
+                                                            -ms-flex-pack: center;
+                                                            -webkit-justify-content: center;
+                                                            justify-content: center;
+                                                            position: absolute;
+                                                            outline: 2px solid transparent;
+                                                            outline-offset: 2px;
+                                                            z-index: 1;
+                                                            border-radius: var(--chakra-radii-full);
+                                                            background: var(--chakra-colors-white);
+                                                            box-shadow: var(--chakra-shadows-base);
+                                                            border: 1px solid;
+                                                            border-color: var(--chakra-colors-transparent);
+                                                            transition-property: transform;
+                                                            transition-duration: var(--chakra-transition-duration-normal);
+                                                            top: 50%;
+                                                            -webkit-transform: translateY(-50%);
+                                                            -moz-transform: translateY(-50%);
+                                                            -ms-transform: translateY(-50%);
+                                                            transform: translateY(-50%);
+                                                            width: 16px;
+                                                            height: 16px;
+                                                            font-size: var(--chakra-fontSizes-sm);
+                                                            background-color: var(--chakra-colors-primary);
+                                                        }
+
+                                                        .css-j9g1p9:focus,
+                                                        .css-j9g1p9[data-focus] {
+                                                            box-shadow: var(--chakra-shadows-outline);
+                                                        }
+
+                                                        .css-j9g1p9[disabled],
+                                                        .css-j9g1p9[aria-disabled=true],
+                                                        .css-j9g1p9[data-disabled] {
+                                                            background: var(--chakra-colors-gray-300);
+                                                        }
+
+                                                        .css-j9g1p9:active,
+                                                        .css-j9g1p9[data-active] {
+                                                            -webkit-transform: translateY(-50%) scale(1.15);
+                                                            -moz-transform: translateY(-50%) scale(1.15);
+                                                            -ms-transform: translateY(-50%) scale(1.15);
+                                                            transform: translateY(-50%) scale(1.15);
+                                                        }
+                                                    </style>
+                                                    <div role="slider" tabindex="0" id="slider-thumb-1" aria-valuemin="5" aria-valuemax="128" aria-valuenow="14" aria-orientation="horizontal" style="position:absolute;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;touch-action:none;left:calc(7.317073170731708% - 0px)"
+                                                        class="chakra-slider__thumb css-j9g1p9"></div><input type="hidden" value="14" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <style data-emotion="css 1sptd97">
+                                        .css-1sptd97 {
+                                            width: 100%;
+                                            margin-top: 3rem;
+                                        }
+                                    </style>
+                                    <div class="css-1sptd97">
+                                        <h5 class="chakra-heading css-ry9wu5">Additional Options</h5>
+                                        <div class="css-2imjyh">
+                                            <style data-emotion="css 4lnyfa">
+                                                .css-4lnyfa {
+                                                    cursor: pointer;
+                                                    display: -webkit-inline-box;
+                                                    display: -webkit-inline-flex;
+                                                    display: -ms-inline-flexbox;
+                                                    display: inline-flex;
+                                                    -webkit-align-items: center;
+                                                    -webkit-box-align: center;
+                                                    -ms-flex-align: center;
+                                                    align-items: center;
+                                                    vertical-align: top;
+                                                    position: relative;
+                                                    width: 50%;
+                                                }
+
+                                                .css-4lnyfa[disabled],
+                                                .css-4lnyfa[aria-disabled=true],
+                                                .css-4lnyfa[data-disabled] {
+                                                    cursor: not-allowed;
+                                                }
+                                            </style><label class="chakra-checkbox css-4lnyfa" data-checked=""><input type="checkbox" class="chakra-checkbox__input" checked="" style="border:0px;clip:rect(0px, 0px, 0px, 0px);height:1px;width:1px;margin:-1px;padding:0px;overflow:hidden;white-space:nowrap;position:absolute"/><style data-emotion="css xxkadm">.css-xxkadm{width:var(--chakra-sizes-4);transition-property:box-shadow;transition-duration:var(--chakra-transition-duration-normal);border:2px solid;border-radius:var(--chakra-radii-sm);border-color:inherit;color:var(--chakra-colors-white);height:var(--chakra-sizes-4);display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;vertical-align:top;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;}.css-xxkadm[aria-checked=true],.css-xxkadm[data-checked]{background:var(--chakra-colors-blue-500);border-color:var(--chakra-colors-blue-500);color:var(--chakra-colors-white);}.css-xxkadm[aria-checked=true]:hover,.css-xxkadm[data-checked]:hover,.css-xxkadm[aria-checked=true][data-hover],.css-xxkadm[data-checked][data-hover]{background:var(--chakra-colors-blue-600);border-color:var(--chakra-colors-blue-600);}.css-xxkadm[aria-checked=true][disabled],.css-xxkadm[data-checked][disabled],.css-xxkadm[aria-checked=true][aria-disabled=true],.css-xxkadm[data-checked][aria-disabled=true],.css-xxkadm[aria-checked=true][data-disabled],.css-xxkadm[data-checked][data-disabled]{border-color:var(--chakra-colors-gray-200);background:var(--chakra-colors-gray-200);color:var(--chakra-colors-gray-500);}.css-xxkadm:indeterminate,.css-xxkadm[aria-checked=mixed],.css-xxkadm[data-indeterminate]{background:var(--chakra-colors-blue-500);border-color:var(--chakra-colors-blue-500);color:var(--chakra-colors-white);}.css-xxkadm[disabled],.css-xxkadm[aria-disabled=true],.css-xxkadm[data-disabled]{background:var(--chakra-colors-gray-100);border-color:var(--chakra-colors-gray-100);}.css-xxkadm:focus,.css-xxkadm[data-focus]{box-shadow:var(--chakra-shadows-outline);}.css-xxkadm[aria-invalid=true],.css-xxkadm[data-invalid]{border-color:var(--chakra-colors-red-500);}</style><span class="chakra-checkbox__control css-xxkadm" data-checked="" aria-hidden="true"><div style="display:flex;align-items:center;justify-content:center;height:100%;transform:none"><style data-emotion="css 1r69mki">.css-1r69mki{opacity:1;-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);transform:scale(1);font-size:0.625rem;transition-property:transform;transition-duration:var(--chakra-transition-duration-normal);width:1.2em;}</style><svg viewBox="0 0 12 10" style="fill:none;stroke-width:2;stroke:currentColor;stroke-dasharray:16;opacity:1;stroke-dashoffset:0" class="css-1r69mki"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></div></span><style data-emotion="css 1sgc0qu">.css-1sgc0qu{-webkit-margin-start:0.5rem;margin-inline-start:0.5rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:var(--chakra-fontSizes-md);}.css-1sgc0qu[disabled],.css-1sgc0qu[aria-disabled=true],.css-1sgc0qu[data-disabled]{opacity:0.4;}</style><span class="chakra-checkbox__label css-1sgc0qu" data-checked="">A-Z</span></label>
+                                            <label
+                                                class="chakra-checkbox css-4lnyfa" data-checked=""><input type="checkbox" class="chakra-checkbox__input" checked="" style="border:0px;clip:rect(0px, 0px, 0px, 0px);height:1px;width:1px;margin:-1px;padding:0px;overflow:hidden;white-space:nowrap;position:absolute"
+                                                /><span class="chakra-checkbox__control css-xxkadm" data-checked="" aria-hidden="true"><div style="display:flex;align-items:center;justify-content:center;height:100%;transform:none"><svg viewBox="0 0 12 10" style="fill:none;stroke-width:2;stroke:currentColor;stroke-dasharray:16;opacity:1;stroke-dashoffset:0" class="css-1r69mki"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></div></span>
+                                                <span
+                                                    class="chakra-checkbox__label css-1sgc0qu" data-checked="">0-9</span>
+                                                    </label><label class="chakra-checkbox css-4lnyfa" data-checked=""><input type="checkbox" class="chakra-checkbox__input" checked="" style="border:0px;clip:rect(0px, 0px, 0px, 0px);height:1px;width:1px;margin:-1px;padding:0px;overflow:hidden;white-space:nowrap;position:absolute"/><span class="chakra-checkbox__control css-xxkadm" data-checked="" aria-hidden="true"><div style="display:flex;align-items:center;justify-content:center;height:100%;transform:none"><svg viewBox="0 0 12 10" style="fill:none;stroke-width:2;stroke:currentColor;stroke-dasharray:16;opacity:1;stroke-dashoffset:0" class="css-1r69mki"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></div></span><span class="chakra-checkbox__label css-1sgc0qu" data-checked="">a-z</span></label>
+                                                    <label
+                                                        class="chakra-checkbox css-4lnyfa"><input type="checkbox" class="chakra-checkbox__input" style="border:0px;clip:rect(0px, 0px, 0px, 0px);height:1px;width:1px;margin:-1px;padding:0px;overflow:hidden;white-space:nowrap;position:absolute"
+                                                        /><span class="chakra-checkbox__control css-xxkadm" aria-hidden="true"></span><span class="chakra-checkbox__label css-1sgc0qu">!@#$%^&amp;*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <style data-emotion="css 1h1c26f">
+                    .css-1h1c26f {
+                        background: var(--chakra-colors-bg-alt);
+                        width: 100%;
+                    }
+                </style>
+            </main>
+            <style data-emotion="css 1voh8v5">
+                .css-1voh8v5 {
+                    padding-top: 2rem;
+                    padding-bottom: 2rem;
+                    background: #1a3b66;
+                    color: var(--chakra-colors-white);
+                }
+
+                @media screen and (min-width: 48em) {
+                    .css-1voh8v5 {
+                        padding-top: 3rem;
+                        padding-bottom: 3rem;
+                    }
+                }
+            </style>
+            <footer role="contentinfo" class="css-1voh8v5">
+                <style data-emotion="css 1dbh0ia">
+                    .css-1dbh0ia {
+                        width: 100%;
+                        -webkit-margin-start: auto;
+                        margin-inline-start: auto;
+                        -webkit-margin-end: auto;
+                        margin-inline-end: auto;
+                        max-width: var(--chakra-sizes-xl);
+                        -webkit-padding-start: 15px;
+                        padding-inline-start: 15px;
+                        -webkit-padding-end: 15px;
+                        padding-inline-end: 15px;
+                        border-bottom: 1px solid rgba(255, 255, 255, .1);
+                    }
+
+                    @media screen and (min-width: 48em) {
+                        .css-1dbh0ia {
+                            max-width: var(--chakra-sizes-7xl);
+                        }
+                    }
+                </style>
+                <section class="chakra-container css-1dbh0ia">
+                    <a href="/">
+                        <style data-emotion="css 721o41">
+                            .css-721o41 {
+                                margin-bottom: 1rem;
+                                width: 180px;
+                            }
+
+                            @media screen and (min-width: 48em) {
+                                .css-721o41 {
+                                    margin-bottom: 2rem;
+                                }
+                            }
+
+                            .css-721o41:hover,
+                            .css-721o41[data-hover] {
+                                -webkit-text-decoration: none;
+                                text-decoration: none;
+                            }
+                        </style>
+                        <div class="css-721o41"><svg viewBox="0 0 547 83" stroke="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M129 20.6C135.3 20.6 140.2 23 143.8 28C147.4 32.9 149.2 39.6 149.2 48.1C149.2 56.9 147.4 63.7 143.7 68.5C140 73.4 135 75.7 128.7 75.7C122.4 75.7 117.6 73.5 114 68.9H113L111.1 73.6C110.8 74.3 110.1 74.7 109.4 74.7H101.4C100.4 74.7 99.6 73.9 99.6 72.9V2.6C99.6 1.6 100.4 0.8 101.4 0.8H112.2C113.2 0.8 114 1.6 114 2.6V18C114 20.2 113.8 23.7 113.4 28.5H114C117.3 23.3 122.4 20.6 129 20.6ZM124.4 32.3C120.9 32.3 118.2 33.4 116.5 35.6C114.9 37.8 114 41.5 114 46.5V48.1C114 53.8 114.8 57.9 116.5 60.3C118.2 62.7 120.9 64 124.6 64C127.5 64 130 62.6 131.7 59.8C133.4 57.1 134.3 53 134.3 47.9C134.3 42.7 133.4 38.8 131.7 36.2C129.9 33.6 127.4 32.3 124.4 32.3ZM173 74.8H162.2C161.2 74.8 160.4 74 160.4 73V23.5C160.4 22.5 161.2 21.7 162.2 21.7H173C174 21.7 174.8 22.5 174.8 23.5V72.9C174.9 73.8 174 74.8 173 74.8ZM212.5 64.1C214.6 64.1 217.1 63.7 220.1 62.9C220.9 62.7 221.6 63.3 221.6 64.1V72.4C221.6 72.9 221.3 73.3 220.9 73.5C217.5 74.9 213.2 75.6 208.4 75.6C202.6 75.6 198.4 74.2 195.8 71.2C193.2 68.3 191.8 63.9 191.8 58.1V32.6H186.1C185.4 32.6 184.9 32.1 184.9 31.4V26.7C184.9 26.6 185 26.5 185 26.4L192.9 21.7L196.8 11.3C197 10.8 197.4 10.5 197.9 10.5H205.1C205.8 10.5 206.3 11 206.3 11.7V21.8H220.6C220.9 21.8 221.2 22.1 221.2 22.4V31.4C221.2 32.1 220.7 32.6 220 32.6H206.4V58C206.4 60 207 61.6 208.1 62.5C209.1 63.6 210.7 64.1 212.5 64.1ZM279.8 74.8C278.4 74.8 277.3 73.9 276.7 72.6L266.1 40.3C265.4 38 264.5 34.5 263.3 30H263L262 33.6L259.9 40.4L249 72.7C248.6 74 247.4 74.8 246 74.8C244.6 74.8 243.4 73.9 243 72.5L229.7 26C229.3 24.6 230.4 23.1 232 23.1H232.3C233.3 23.1 234.2 23.8 234.5 24.8L242.3 53.1C244.2 60.5 245.5 65.9 246.1 69.5H246.4C248.2 62.1 249.6 57.2 250.5 54.7L260.6 25.1C261 23.9 262.1 23.1 263.5 23.1C264.8 23.1 265.9 23.9 266.3 25.1L275.7 54.5C278 62 279.4 66.8 279.9 69.3H280.2C280.5 67.3 281.7 61.7 284 52.7L291.5 24.8C291.8 23.8 292.7 23.1 293.7 23.1C295.2 23.1 296.3 24.5 295.9 26L283.3 72.5C282.9 73.9 281.7 74.8 280.2 74.8H279.8ZM339.2 74.8C338.3 74.8 337.5 74.1 337.4 73.2L336.5 66.6H336C333.4 69.9 330.8 72.3 328 73.7C325.3 75.1 322 75.7 318.3 75.7C313.2 75.7 309.3 74.4 306.5 71.8C304 69.5 302.6 66.4 302.4 62.5C302 57.3 304.2 52.3 308.4 49.4C312.7 46.6 318.7 44.9 326.8 44.9L336.6 44.6V41.2C336.6 36.2 335.6 32.6 333.5 30.1C331.4 27.6 328.3 26.4 323.9 26.4C319.7 26.4 315.5 27.4 311.1 29.5C310 30 308.7 29.5 308.2 28.4C307.7 27.3 308.2 26 309.3 25.6C314.3 23.6 319.2 22.5 324.2 22.5C329.9 22.5 334.1 24 337 27C339.8 29.9 341.2 34.6 341.2 40.7V73.2C341.1 73.8 340.2 74.8 339.2 74.8ZM318.5 71.4C324.1 71.4 328.4 69.8 331.5 66.7C334.7 63.6 336.3 59.1 336.3 53.6V48.6L327.3 49C320 49.3 314.9 50.5 311.7 52.4C308.6 54.3 307 57.4 307 61.4C307 64.6 308 67.2 309.9 69C312.1 70.5 314.9 71.4 318.5 71.4ZM377.7 22.1C379.2 22.1 380.7 22.2 382.4 22.4C383.7 22.6 384.5 23.8 384.3 25C384.1 26.2 382.9 26.9 381.7 26.7C380.2 26.5 378.7 26.3 377.2 26.3C372.8 26.3 369.2 28.2 366.4 31.9C363.6 35.6 362.2 40.4 362.2 46V72.2C362.2 73.5 361.2 74.5 359.9 74.5C358.6 74.5 357.6 73.5 357.6 72.2V25.2C357.6 24.1 358.5 23.2 359.6 23.2C360.7 23.2 361.6 24 361.6 25.1L362 32.5H362.3C364.4 28.7 366.7 26 369.1 24.5C371.4 22.9 374.3 22.1 377.7 22.1ZM412.9 22.1C416.6 22.1 419.9 22.8 422.6 24.1C425.4 25.4 427.8 27.8 429.9 31.1H430.2C430 27 429.9 23.2 429.9 19.4V3.1C429.9 1.8 430.9 0.8 432.2 0.8C433.5 0.8 434.5 1.8 434.5 3.1V73C434.5 73.9 433.8 74.6 432.9 74.6C432.1 74.6 431.4 74 431.3 73.1L430.3 66.6H429.9C426 72.5 420.3 75.4 413 75.4C405.8 75.4 400.5 73.2 396.6 68.7C392.9 64.2 390.9 57.8 390.9 49.3C390.9 40.4 392.7 33.6 396.5 28.8C400.3 24.5 405.7 22.1 412.9 22.1ZM412.9 26.4C407.2 26.4 403 28.4 400.1 32.4C397.3 36.3 395.9 42 395.9 49.6C395.9 64.2 401.6 71.5 413 71.5C418.9 71.5 423.1 69.8 425.8 66.4C428.6 63 429.9 57.4 429.9 49.6V48.8C429.9 40.8 428.6 35.1 425.8 31.7C423.2 28.1 418.9 26.4 412.9 26.4ZM472.8 75.7C465.3 75.7 459.5 73.4 455.2 68.7C451 64.1 448.9 57.6 448.9 49.3C448.9 41 450.9 34.4 455 29.5C459.1 24.5 464.5 22 471.4 22C477.4 22 482.3 24.1 485.7 28.3C489.3 32.5 491 38.3 491 45.6V49.4H453.8C453.9 56.5 455.5 61.9 458.8 65.7C462.1 69.5 466.7 71.2 472.8 71.2C475.7 71.2 478.4 71 480.6 70.6C482.2 70.3 484.1 69.8 486.4 69C487.7 68.5 489.1 69.5 489.1 70.9C489.1 71.7 488.6 72.5 487.8 72.8C485.4 73.8 483.1 74.4 481 74.8C478.5 75.5 475.8 75.7 472.8 75.7ZM471.4 26.3C466.4 26.3 462.4 27.9 459.4 31.2C456.4 34.4 454.7 39.2 454.1 45.3H486.1C486.1 39.4 484.8 34.6 482.2 31.3C479.6 28 476 26.3 471.4 26.3ZM543.8 74.8C542.5 74.8 541.5 73.8 541.5 72.5V41.2C541.5 36 540.4 32.2 538.3 29.9C536 27.6 532.7 26.3 528.1 26.3C521.9 26.3 517.4 27.8 514.6 31C511.8 34.1 510.2 39.2 510.2 46.1V72.3C510.2 73.6 509.2 74.6 507.9 74.6C506.6 74.6 505.6 73.6 505.6 72.3V25.2C505.6 24 506.5 23.1 507.7 23.1C508.8 23.1 509.6 23.9 509.8 24.9L510.4 30.1H510.7C514.1 24.7 520 22 528.6 22C540.3 22 546.2 28.3 546.2 40.9V72.3C546.1 73.7 545 74.8 543.8 74.8ZM167.7 0C163 0 159.2 3.6 159.2 8.1V8.9C159.2 13.3 163.1 17 167.7 17C172.3 17 176.2 13.3 176.2 8.9V8.2C176.2 3.6 172.3 0 167.7 0ZM67.4 1.8C66.7 1.1 65.9 0.8 65 0.8H3.4C2.4 0.8 1.7 1.1 1 1.8C0.3 2.5 0 3.4 0 4.2V45.2C0 48.2 0.6 51.3 1.8 54.3C3 57.3 4.4 60 6.2 62.3C7.9 64.6 10.1 67 12.5 69.1C14.9 71.3 17.2 73.2 19.3 74.6C21.3 76 23.6 77.4 25.8 78.7C28 80 29.6 80.9 30.5 81.3C31.4 81.8 32.2 82.1 32.7 82.4C33.1 82.6 33.6 82.7 34.1 82.7C34.6 82.7 35.1 82.6 35.5 82.4C36.1 82.2 36.8 81.8 37.8 81.3C38.7 80.8 40.3 80 42.5 78.7C44.7 77.4 46.9 76 49 74.6C51 73.2 53.4 71.3 55.8 69.1C58.2 66.9 60.3 64.7 62.1 62.3C63.8 60 65.3 57.3 66.5 54.3C67.7 51.3 68.3 48.2 68.3 45.2V4.2C68.4 3.4 68.1 2.5 67.4 1.8ZM59.5 45.6C59.5 60.5 34.2 73.3 34.2 73.3V9.6H59.5C59.5 9.6 59.5 30.8 59.5 45.6Z"></path></svg></div>
+                    </a>
+                </section>
+            </footer>
+        </div>
+        <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div><span></span></div>
+    <script>
+        function gaOptout() {
+            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/', window[disableStr] = !0
+        }
+        var gaProperty = 'UA-81915606-4',
+            disableStr = 'ga-disable-' + gaProperty;
+        document.cookie.indexOf(disableStr + '=true') > -1 && (window[disableStr] = !0);
+        if (!(parseInt(navigator.doNotTrack) === 1 || parseInt(window.doNotTrack) === 1 || parseInt(navigator.msDoNotTrack) === 1 || navigator.doNotTrack === "yes")) {
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        }
+        if (typeof ga === "function") {
+            ga('create', 'UA-81915606-4', 'auto', {});
+            ga('set', 'anonymizeIp', true);
+
+
+
+
+        }
+    </script>
+    <script id="gatsby-script-loader">
+        /*<![CDATA[*/
+        window.pagePath = "/password-generator/";
+        window.___webpackCompilationHash = "9b5c7045c4985f17e7d0"; /*]]>*/
+    </script>
+    <script id="gatsby-chunk-mapping">
+        /*<![CDATA[*/
+        window.___chunkMapping = {
+            "polyfill": ["/polyfill-e577cbf2d8fde2d2bc05.js"],
+            "app": ["/app-9eff3a556067733acc3c.js"],
+            "component---src-pages-404-js": ["/component---src-pages-404-js-fe3b38ecd6b522356eac.js"],
+            "component---src-pages-about-de-impressum-js": ["/component---src-pages-about-de-impressum-js-64457b6281dbeb1d88cc.js"],
+            "component---src-pages-about-impressum-js": ["/component---src-pages-about-impressum-js-24dce608386e115b4f9d.js"],
+            "component---src-pages-about-index-js": ["/component---src-pages-about-index-js-d81ec08fe61f0a0f43b2.js"],
+            "component---src-pages-bitwarden-reviews-js": ["/component---src-pages-bitwarden-reviews-js-2bb8462a2e47daa4d13e.js"],
+            "component---src-pages-browser-start-js": ["/component---src-pages-browser-start-js-db0604295c8fd94a3b5b.js"],
+            "component---src-pages-business-password-manager-js": ["/component---src-pages-business-password-manager-js-49a005290d1764768b47.js"],
+            "component---src-pages-careers-js": ["/component---src-pages-careers-js-8bc5d3b5242e2bb050e4.js"],
+            "component---src-pages-compliance-js": ["/component---src-pages-compliance-js-c0de6e9c3e498c2c21ac.js"],
+            "component---src-pages-contact-js": ["/component---src-pages-contact-js-e17f9306bd92003baac0.js"],
+            "component---src-pages-contact-sales-index-js": ["/component---src-pages-contact-sales-index-js-5bf2fc32f66cda902f1e.js"],
+            "component---src-pages-contact-sales-thank-you-js": ["/component---src-pages-contact-sales-thank-you-js-ca766752d18bc48ad6a4.js"],
+            "component---src-pages-discovery-js": ["/component---src-pages-discovery-js-75d2ca57031255dc573c.js"],
+            "component---src-pages-dln-js": ["/component---src-pages-dln-js-c68d98b5513238f942ca.js"],
+            "component---src-pages-download-js": ["/component---src-pages-download-js-3e7b00097ce8fc358002.js"],
+            "component---src-pages-enterprise-demo-js": ["/component---src-pages-enterprise-demo-js-a4c6ef91e702cabb6b8d.js"],
+            "component---src-pages-essentials-training-admin-js": ["/component---src-pages-essentials-training-admin-js-e7adf99190aa565602cb.js"],
+            "component---src-pages-essentials-training-intro-js": ["/component---src-pages-essentials-training-intro-js-2d38259659e77e089f0a.js"],
+            "component---src-pages-essentials-training-power-user-js": ["/component---src-pages-essentials-training-power-user-js-e69268cf5f1bfdeeb5d1.js"],
+            "component---src-pages-essentials-training-power-users-js": ["/component---src-pages-essentials-training-power-users-js-a40e56ef106e743b9b6e.js"],
+            "component---src-pages-go-all-you-need-js": ["/component---src-pages-go-all-you-need-js-a122aab0b3bda7d4b6e0.js"],
+            "component---src-pages-go-bitwarden-vs-lastpass-js": ["/component---src-pages-go-bitwarden-vs-lastpass-js-8576c1411372fe8b03b5.js"],
+            "component---src-pages-go-password-management-data-quadrant-report-js": ["/component---src-pages-go-password-management-data-quadrant-report-js-a5b52885f2c9c0519570.js"],
+            "component---src-pages-help-api-index-tsx": ["/component---src-pages-help-api-index-tsx-518620fcce5eb29ad3bd.js"],
+            "component---src-pages-host-js": ["/component---src-pages-host-js-ad7c79c95158e0faa96c.js"],
+            "component---src-pages-how-secure-is-my-password-js": ["/component---src-pages-how-secure-is-my-password-js-ff0fad84a60ced54fcb1.js"],
+            "component---src-pages-index-js": ["/component---src-pages-index-js-92b2fb6e5229a27c2fd9.js"],
+            "component---src-pages-media-spotlight-js": ["/component---src-pages-media-spotlight-js-03f0c714aeda116818a2.js"],
+            "component---src-pages-msp-index-js": ["/component---src-pages-msp-index-js-b30f34e5dc3b806b25ed.js"],
+            "component---src-pages-msp-program-deployment-guide-js": ["/component---src-pages-msp-program-deployment-guide-js-5b062d7ca806ae514948.js"],
+            "component---src-pages-newsletter-subscribe-js": ["/component---src-pages-newsletter-subscribe-js-bb00a73a6d78744d34a0.js"],
+            "component---src-pages-open-source-js": ["/component---src-pages-open-source-js-01166ce14cd5bf6e7293.js"],
+            "component---src-pages-password-generator-js": ["/component---src-pages-password-generator-js-f87e96b4378dae3e7d23.js"],
+            "component---src-pages-password-strength-js": ["/component---src-pages-password-strength-js-a8b80ff815fd667f6317.js"],
+            "component---src-pages-pricing-business-js": ["/component---src-pages-pricing-business-js-e84c174ce1c00afbf94b.js"],
+            "component---src-pages-pricing-index-js": ["/component---src-pages-pricing-index-js-cd5eed8dec15c4a85c56.js"],
+            "component---src-pages-privacy-cookies-js": ["/component---src-pages-privacy-cookies-js-148906300bbafa7ad7ab.js"],
+            "component---src-pages-privacy-index-js": ["/component---src-pages-privacy-index-js-ea6be0cae7cbae55e932.js"],
+            "component---src-pages-products-business-support-js": ["/component---src-pages-products-business-support-js-2723194859e5991103f7.js"],
+            "component---src-pages-products-index-js": ["/component---src-pages-products-index-js-607b4bcd576f488f77cd.js"],
+            "component---src-pages-products-send-js": ["/component---src-pages-products-send-js-03795aa0dde774bd5167.js"],
+            "component---src-pages-resources-briefs-bitwarden-overview-js": ["/component---src-pages-resources-briefs-bitwarden-overview-js-555062acd71e3345e766.js"],
+            "component---src-pages-section-testimonials-js": ["/component---src-pages-section-testimonials-js-bf79e17514ffd336d6bf.js"],
+            "component---src-pages-security-for-all-js": ["/component---src-pages-security-for-all-js-db3c8588b26285282063.js"],
+            "component---src-pages-sitemap-js": ["/component---src-pages-sitemap-js-ff14975db7b96adb02c6.js"],
+            "component---src-pages-terms-business-js": ["/component---src-pages-terms-business-js-1873b4ca8c49b76ec222.js"],
+            "component---src-pages-terms-js": ["/component---src-pages-terms-js-c2cbade81ab864323730.js"],
+            "component---src-pages-the-answer-is-bitwarden-js": ["/component---src-pages-the-answer-is-bitwarden-js-619946231c0045e1833e.js"],
+            "component---src-pages-twit-js": ["/component---src-pages-twit-js-4cbd9867792e7d588763.js"],
+            "component---src-pages-user-reviews-js": ["/component---src-pages-user-reviews-js-6381dde829ec12b3bfef.js"],
+            "component---src-pages-weekly-js": ["/component---src-pages-weekly-js-63c00c3c29eba32af7c8.js"],
+            "component---src-templates-blog-list-js": ["/component---src-templates-blog-list-js-eafa6165af623d578e8d.js"],
+            "component---src-templates-blog-post-js": ["/component---src-templates-blog-post-js-01453fc0aba17da53921.js"],
+            "component---src-templates-blog-tag-list-js": ["/component---src-templates-blog-tag-list-js-3034c94df2070cbd9889.js"],
+            "component---src-templates-careers-post-js": ["/component---src-templates-careers-post-js-e90397c646e334b825e2.js"],
+            "component---src-templates-events-category-list-js": ["/component---src-templates-events-category-list-js-305af57329f801c33ed8.js"],
+            "component---src-templates-events-list-js": ["/component---src-templates-events-list-js-5a7ca596af2d5588a56e.js"],
+            "component---src-templates-events-tag-list-js": ["/component---src-templates-events-tag-list-js-518d6a75b1e274cbcada.js"],
+            "component---src-templates-help-article-tsx": ["/component---src-templates-help-article-tsx-560793a3528e0e1b42c9.js"],
+            "component---src-templates-learning-list-js": ["/component---src-templates-learning-list-js-aa7e62e15f929e51d06c.js"],
+            "component---src-templates-newsfeed-category-list-js": ["/component---src-templates-newsfeed-category-list-js-8f68d27a9718d2c56dfc.js"],
+            "component---src-templates-newsfeed-list-js": ["/component---src-templates-newsfeed-list-js-c6f05687f294ee0fc8a6.js"],
+            "component---src-templates-newsfeed-tag-list-js": ["/component---src-templates-newsfeed-tag-list-js-8464088a8776775d675e.js"],
+            "component---src-templates-presentation-post-js": ["/component---src-templates-presentation-post-js-b7d85ed9c437f0c657da.js"],
+            "component---src-templates-resources-list-js": ["/component---src-templates-resources-list-js-9307f7bff89c97c1e150.js"],
+            "component---src-templates-resources-page-js": ["/component---src-templates-resources-page-js-758ccec9a5a4527d5056.js"],
+            "component---src-templates-resources-tag-list-js": ["/component---src-templates-resources-tag-list-js-7949217092541bf8529c.js"],
+            "component---src-templates-resources-video-page-js": ["/component---src-templates-resources-video-page-js-12671807551dd98afaa3.js"],
+            "reactPlayerYouTube": ["/reactPlayerYouTube-d3f38becf5536938e538.js"],
+            "reactPlayerSoundCloud": ["/reactPlayerSoundCloud-90e6201b9c14af9ac840.js"],
+            "reactPlayerVimeo": ["/reactPlayerVimeo-c47bfbfa135b829a3b57.js"],
+            "reactPlayerFacebook": ["/reactPlayerFacebook-44090b2b322bb0a747e7.js"],
+            "reactPlayerStreamable": ["/reactPlayerStreamable-d10dc6d58208571edd28.js"],
+            "reactPlayerWistia": ["/reactPlayerWistia-c562dab4bbe0216a6fc2.js"],
+            "reactPlayerTwitch": ["/reactPlayerTwitch-a71af38b03ac03323c8b.js"],
+            "reactPlayerDailyMotion": ["/reactPlayerDailyMotion-3e775f1810e97a608d8a.js"],
+            "reactPlayerMixcloud": ["/reactPlayerMixcloud-f4b0b616060b04d6ea6a.js"],
+            "reactPlayerVidyard": ["/reactPlayerVidyard-d9bc20b19223c0e17a6c.js"],
+            "reactPlayerKaltura": ["/reactPlayerKaltura-80feceacffac98b660c7.js"],
+            "reactPlayerFilePlayer": ["/reactPlayerFilePlayer-bc2e42d534d97cdb7f65.js"],
+            "reactPlayerPreview": ["/reactPlayerPreview-ff8c684aca290b2cb17e.js"]
+        }; /*]]>*/
+    </script>
+    <script nomodule src='/cloudfront.net/js/polyfill-e577cbf2d8fde2d2bc05.js'></script>
+    <script async src='/cloudfront.net/bundles/3116da2c0e7ce6c6739203bd0f3317ad2c3aee54.js'></script>
+</body>
+
+</html>
