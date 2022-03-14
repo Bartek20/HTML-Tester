@@ -42186,7 +42186,7 @@ var header_right;
 var header_mobile;
 var header_toggle;
 
-function select()
+async function select()
 {
     while (header_left == null || header_search == null || header_right == null || header_mobile == null || header_toggle == null)
     {
