@@ -37,15 +37,17 @@ function select()
                 console.log("Niepowodzenie...");
             }
         }
+        else
+        {
+            header_left.remove();
+            header_search.remove();
+            header_right.remove();
+            header_mobile.remove();
+            header_toggle.remove();
+
+            w.terminate();
+        }
     }
-}
+};
 
-select().then(() => {
-    header_left.remove();
-    header_search.remove();
-    header_right.remove();
-    header_mobile.remove();
-    header_toggle.remove();
-
-    w.terminate();
-});
+select();
