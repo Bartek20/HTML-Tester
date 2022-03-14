@@ -3141,46 +3141,43 @@
     </script>
     <script nomodule src='/cloudfront.net/js/polyfill-e577cbf2d8fde2d2bc05.js'></script>
     <script async src='/cloudfront.net/bundles/3116da2c0e7ce6c6739203bd0f3317ad2c3aee54.js'></script>
-    <script>
+    <!--<script>
+        var header_left;
+        var header_search;
+        var header_right;
+        var header_mobile;
+        var header_toggle;
+        
+        function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
+        
+        function trash_select() {
+            header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
+            header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
+            header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
+            header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
+            header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
+        }
+
+        function trash_remover() {
+            header_left.remove();
+            header_search.remove();
+            header_right.remove();
+            header_mobile.remove();
+            header_toggle.remove();
+        }
+
         window.addEventListener("DOMContentLoaded", function(){
-            var header_left;
-            var header_search;
-            var header_right;
-            var header_mobile;
-            var header_toggle;
-            
-            while (header_left == null)
-            {
-                header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
-            }
-            while (header_search == null)
-            {
-                header_search = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > button");
-            }
-            while (header_right == null)
-            {
-                header_right = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-1k1ocop");
-            }
-            while (header_mobile == null)
-            {
-                header_mobile = document.querySelector("#gatsby-focus-wrapper > header > div.css-1brxi1h");
-            }
-            while (header_toggle == null)
-            {
-                header_toggle = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > svg");
-            }
-                
-            try {
-                header_left.remove();
-                header_search.remove();
-                header_right.remove();
-                header_mobile.remove();
-                header_toggle.remove();
-            } catch (error) {
-                console.log(error);
-            }
+            sleep(1000).then(() => {
+                trash_select().then(() => {
+                    try {
+                        trash_remover();
+                    } catch (error) {
+                        console.log(error);
+                    }
+                });
+            });
         });
-    </script>
+    </script>-->
 </body>
 
 </html>
