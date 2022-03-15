@@ -1,14 +1,14 @@
-var header_left;
-var header_search;
-var header_right;
-var header_mobile;
-var header_toggle;
-var retry = 0;
-
 function sleep(ms) {return new Promise(resolve => setTimeout(resolve, ms));}
 
 function select()
 {
+    var header_left;
+    var header_search;
+    var header_right;
+    var header_mobile;
+    var header_toggle;
+    var retry = 0;
+    
     try
     {
         header_left = document.querySelector("#gatsby-focus-wrapper > header > div.css-1dsmrkm > div.css-gs045i > div");
