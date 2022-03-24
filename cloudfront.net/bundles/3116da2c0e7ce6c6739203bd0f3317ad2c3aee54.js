@@ -2186,6 +2186,7 @@
                         "password" === l && p(14), "passphrase" === l && p(4)
                     }, [l]), (0, i.useEffect)(function() {
                         if ("password" === l) {
+                            console.log("Lenght: ", d, "\nNumbers: ", w, "\nLowercase: ", y, "\nUppercase: ", h, "\nSybbols: ", C);
                             var e = ue().generate({
                                 length: d,
                                 numbers: w,
